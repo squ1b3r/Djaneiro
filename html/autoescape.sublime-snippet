@@ -1,0 +1,11 @@
+<!-- See http://www.sublimetext.com/docs/snippets for more information -->
+<snippet>
+	<content><![CDATA[
+{% autoescape ${1:off} %}
+	$2
+{% endautoescape %}
+]]> </content>
+	<tabTrigger>autoescape</tabTrigger>
+    <scope>text.html.django</scope>
+    <description>autoescape</description>
+</snippet>

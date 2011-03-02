@@ -1,0 +1,7 @@
+<!-- See http://www.sublimetext.com/docs/snippets for more information -->
+<snippet>
+	<content><![CDATA[# -*- coding: utf-8 -*-]]></content>
+    <tabTrigger>utfc</tabTrigger>
+    <scope>source.python</scope>
+    <description>coding: utf-8</description>
+</snippet>

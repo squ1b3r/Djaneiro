@@ -1,0 +1,11 @@
+<!-- See http://www.sublimetext.com/docs/snippets for more information -->
+<snippet>
+	<content><![CDATA[
+{% blocktrans with ${1:var1} as ${2:var2} %}
+	{{ ${2:var2} }}
+{% endblocktrans %}
+]]>	</content>
+    <tabTrigger>blocktrans</tabTrigger>
+    <scope>text.html.django</scope>
+    <description>blocktrans</description>
+</snippet>

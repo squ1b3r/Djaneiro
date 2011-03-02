@@ -1,0 +1,11 @@
+<!-- See http://www.sublimetext.com/docs/snippets for more information -->
+<snippet>
+	<content><![CDATA[
+{% block ${1:blockname} %}
+	$2
+{% endblock ${1:blockname} %}
+]]>	</content>
+    <tabTrigger>block</tabTrigger>
+    <scope>text.html.django</scope>
+    <description>block</description>
+</snippet>

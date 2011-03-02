@@ -1,0 +1,11 @@
+<!-- See http://www.sublimetext.com/docs/snippets for more information -->
+<snippet>
+	<content><![CDATA[
+{% for $1 in $2 %}
+	$3
+{% endfor %}
+]]>	</content>
+    <tabTrigger>for</tabTrigger>
+    <scope>text.html.django</scope>
+    <description>for</description>
+</snippet>

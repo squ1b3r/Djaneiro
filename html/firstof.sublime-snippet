@@ -1,0 +1,7 @@
+<!-- See http://www.sublimetext.com/docs/snippets for more information -->
+<snippet>
+	<content><![CDATA[{% firstof $1 %}]]></content>
+    <tabTrigger>firstof</tabTrigger>
+    <scope>text.html.django</scope>
+    <description>firstof</description>
+</snippet>

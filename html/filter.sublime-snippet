@@ -1,0 +1,11 @@
+<!-- See http://www.sublimetext.com/docs/snippets for more information -->
+<snippet>
+	<content><![CDATA[
+{% filter $1 %}
+	$2
+{% endfilter %}
+]]> </content>
+    <tabTrigger>filter</tabTrigger>
+    <scope>text.html.django</scope>
+    <description>filter</description>
+</snippet>

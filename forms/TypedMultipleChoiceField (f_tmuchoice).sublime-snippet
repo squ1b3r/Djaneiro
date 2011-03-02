@@ -1,0 +1,7 @@
+<!-- See http://www.sublimetext.com/docs/snippets for more information -->
+<snippet>
+    <content><![CDATA[${1:FIELDNAME} = forms.TypedMultipleChoiceField($2)]]></content>
+    <tabTrigger>f_tmuchoice</tabTrigger>
+    <scope>source.python</scope>
+    <description>TypedMultipleChoiceField (f_tmuchoice)</description>
+</snippet>

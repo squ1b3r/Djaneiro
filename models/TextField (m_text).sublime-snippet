@@ -1,0 +1,7 @@
+<!-- See http://www.sublimetext.com/docs/snippets for more information -->
+<snippet>
+    <content><![CDATA[${1:FIELDNAME} = models.TextField($2)]]></content>
+    <tabTrigger>m_text</tabTrigger>
+    <scope>source.python</scope>
+    <description>TextField (m_text)</description>
+</snippet>

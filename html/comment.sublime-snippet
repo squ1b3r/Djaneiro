@@ -1,0 +1,11 @@
+<!-- See http://www.sublimetext.com/docs/snippets for more information -->
+<snippet>
+	<content><![CDATA[
+{% comment %}
+	$1
+{% endcomment %}
+]]>	</content>
+    <tabTrigger>comment</tabTrigger>
+    <scope>text.html.django</scope>
+    <description>comment</description>
+</snippet>

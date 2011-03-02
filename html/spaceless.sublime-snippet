@@ -1,0 +1,11 @@
+<!-- See http://www.sublimetext.com/docs/snippets for more information -->
+<snippet>
+	<content><![CDATA[
+{% spaceless %}
+	$1
+{% endspaceless %}
+]]>	</content>
+    <tabTrigger>spaceless</tabTrigger>
+    <scope>text.html.django</scope>
+    <description>spaceless</description>
+</snippet>

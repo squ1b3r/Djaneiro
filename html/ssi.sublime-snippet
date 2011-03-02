@@ -1,0 +1,7 @@
+<!-- See http://www.sublimetext.com/docs/snippets for more information -->
+<snippet>
+	<content><![CDATA[{% ssi $1 ${2:parsed} %}]]></content>
+    <tabTrigger>ssi</tabTrigger>
+    <scope>text.html.django</scope>
+    <description>ssi</description>
+</snippet>

@@ -1,0 +1,7 @@
+<!-- See http://www.sublimetext.com/docs/snippets for more information -->
+<snippet>
+	<content><![CDATA[{% debug %}]]></content>
+    <tabTrigger>debug</tabTrigger>
+    <scope>text.html.debug</scope>
+    <description>debug</description>
+</snippet>

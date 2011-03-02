@@ -1,0 +1,44 @@
+{
+	"scope": "source.python",
+
+	"completions":
+	[
+		{ "trigger": "null", "contents": "null=${1:True}"},
+		{ "trigger": "blank", "contents": "blank=${1:True}" },
+		{ "trigger": "choices", "contents": "choices='$1'" },
+		{ "trigger": "db_column", "contents": "db_column='$1'" },
+		{ "trigger": "db_index", "contents": "db_index=${1:True}" },
+		{ "trigger": "db_tablespace", "contents": "db_tablespace='$1'" },
+		{ "trigger": "default", "contents": "default=${1:True}" },
+		{ "trigger": "related_name", "contents": "related_name='$1'" },
+		{ "trigger": "editable", "contents": "editable=${1:False}" },
+		{ "trigger": "error_message", "contents": "error_message='$1'" },
+		{ "trigger": "help_message", "contents": "help_message='$1'" },
+		{ "trigger": "primary_key", "contents": "primary_key=${1:True}" },
+		{ "trigger": "unique", "contents": "unique=${1:True}" },
+		{ "trigger": "unique_together", "contents": "unique_together = ('$1',)" },
+		{ "trigger": "unique_for_date", "contents": "unique_for_date='$1'" },
+		{ "trigger": "unique_for_month", "contents": "unique_for_month='$1'" },
+		{ "trigger": "unique_for_year", "contents": "unique_for_month='$1'" },
+		{ "trigger": "verbose_name", "contents": "verbose_name='$1'" },
+		{ "trigger": "validators", "contents": "validators=[$1]" },
+		{ "trigger": "auto_now_add", "contents": "auto_now_add=${1:True}" },
+		{ "trigger": "auto_now", "contents": "auto_now=${1:True}" },
+
+		{ "trigger": "verbose_name = ", "contents": "verbose_name = '$1'" },
+		{ "trigger": "verbose_name_plural", "contents": "verbose_name_plural = '$1'" },
+
+		{ "trigger": "required", "contents": "required=${1:True}" },
+		{ "trigger": "label", "contents": "label='$1'" },
+		{ "trigger": "initial", "contents": "initial='$1'" },
+		{ "trigger": "widget", "contents": "widget=$1" },
+		{ "trigger": "localized", "contents": "localized=$1" },
+
+		{ "trigger": "return", "contents": "return" },
+		{ "trigger": "render_to_response", "contents": "render_to_response('${1:template}', {$2}, context_instance=RequestContext(request))" },
+		{ "trigger": "render", "contents": "render(request, ${1:template})" },
+		{ "trigger": "redirect", "contents": "redirect(${1:to})" },
+		{ "trigger": "get_object_or_404", "contents": "get_object_or_404(${1:klass}, ${2:**kwargs})" },
+		{ "trigger": "get_list_or_404", "contents": "get_list_or_404(${1:klass}, ${2:**kwargs})" }
+	]
+}

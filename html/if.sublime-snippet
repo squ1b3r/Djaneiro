@@ -1,0 +1,11 @@
+<!-- See http://www.sublimetext.com/docs/snippets for more information -->
+<snippet>
+	<content><![CDATA[
+{% if $1 %}
+	$2
+{% endif %}
+]]>	</content>
+    <tabTrigger>if</tabTrigger>
+    <scope>text.html.django</scope>
+    <description>if</description>
+</snippet>

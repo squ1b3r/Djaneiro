@@ -1,0 +1,7 @@
+<!-- See http://www.sublimetext.com/docs/snippets for more information -->
+<snippet>
+    <content><![CDATA[${1:FIELDNAME} = forms.URLField($2)]]></content>
+    <tabTrigger>f_url</tabTrigger>
+    <scope>source.python</scope>
+    <description>URLField (f_url)</description>
+</snippet>

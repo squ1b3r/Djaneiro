@@ -1,0 +1,11 @@
+<!-- See http://www.sublimetext.com/docs/snippets for more information -->
+<snippet>
+	<content><![CDATA[
+{% ifequal $1 $2 %}
+	$3
+{% endifequal %}
+]]>	</content>
+    <tabTrigger>ifeq</tabTrigger>
+    <scope>text.html.django</scope>
+    <description>ifequal (ifeq)</description>
+</snippet>

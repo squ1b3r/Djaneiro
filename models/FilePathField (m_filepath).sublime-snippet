@@ -1,0 +1,7 @@
+<!-- See http://www.sublimetext.com/docs/snippets for more information -->
+<snippet>
+    <content><![CDATA[${1:FIELDNAME} = models.FilePathField($2)]]></content>
+    <tabTrigger>m_filepath</tabTrigger>
+    <scope>source.python</scope>
+    <description>FilePathField (m_filepath)</description>
+</snippet>
