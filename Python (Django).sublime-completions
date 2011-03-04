@@ -35,10 +35,17 @@
 		{ "trigger": "localized", "contents": "localized=$1" },
 
 		{ "trigger": "return", "contents": "return" },
-		{ "trigger": "render_to_response", "contents": "render_to_response('${1:template}', {$2}, context_instance=RequestContext(request))" },
-		{ "trigger": "render", "contents": "render(request, ${1:template})" },
-		{ "trigger": "redirect", "contents": "redirect(${1:to})" },
-		{ "trigger": "get_object_or_404", "contents": "get_object_or_404(${1:klass}, ${2:**kwargs})" },
-		{ "trigger": "get_list_or_404", "contents": "get_list_or_404(${1:klass}, ${2:**kwargs})" }
+		{ "trigger": "render_to_response", "contents": "render_to_response" },
+		{ "trigger": "RequestContext", "contents": "RequestContext" },
+		{ "trigger": "context_instance", "contents": "context_instance" },
+		{ "trigger": "get_object_or_404", "contents": "get_object_or_404"},
+		{ "trigger": "get_list_or_404", "contents": "get_list_or_404" },
+		{ "trigger": "render", "contents": "render" },
+		{ "trigger": "redirect", "contents": "redirect" },
+		{ "trigger": "render_to_response()", "contents": "render_to_response('${1:template}', {$2}, context_instance=RequestContext(request))" },
+		{ "trigger": "render()", "contents": "render(request, ${1:template})" },
+		{ "trigger": "redirect()", "contents": "redirect(${1:to})" },
+		{ "trigger": "get_object_or_404()", "contents": "get_object_or_404(${1:klass}, ${2:**kwargs})" },
+		{ "trigger": "get_list_or_404()", "contents": "get_list_or_404(${1:klass}, ${2:**kwargs})" }
 	]
 }
