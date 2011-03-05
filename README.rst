@@ -165,6 +165,8 @@ Completions
 - localized
 
 - return
+- RequestContext
+- context_instance
 - render_to_response
 - render
 - redirect
