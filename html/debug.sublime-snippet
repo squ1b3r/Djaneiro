@@ -2,6 +2,6 @@
 <snippet>
 	<content><![CDATA[{% debug %}]]></content>
     <tabTrigger>debug</tabTrigger>
-    <scope>text.html.debug</scope>
+    <scope>text.html.django</scope>
     <description>debug</description>
 </snippet>
