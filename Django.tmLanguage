@@ -126,7 +126,7 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>\b(autoescape|endautoescape|block|endblock|blocktrans|endblocktrans|trans|plural|debug|extends|filter|firstof|for|empty|endfor|if|else|endif|include|ifchanged|endifchanged|ifequal|endifequal|ifnotequal|endifnotequal|load|low|regroup|ssi|spaceless|endspaceless|templatetag|widthratio|with|endwith|csrf_token|cycle|url|lorem)\b</string>
+					<string>\b(autoescape|endautoescape|block|endblock|blocktrans|endblocktrans|trans|plural|debug|extends|filter|firstof|for|empty|endfor|if|else|endif|include|ifchanged|endifchanged|ifequal|endifequal|ifnotequal|endifnotequal|load|from|low|regroup|ssi|spaceless|endspaceless|templatetag|widthratio|with|endwith|csrf_token|cycle|url|lorem|thumbnail)\b</string>
 					<key>name</key>
 					<string>keyword.control.tag-name.django</string>
 				</dict>
