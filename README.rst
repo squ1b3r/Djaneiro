@@ -135,6 +135,8 @@ Snippets for Django form fields
 Completions
 ------------
 
+    Full list of all available settings
+
 - null
 - blank
 - choices
