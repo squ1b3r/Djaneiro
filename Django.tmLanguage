@@ -94,7 +94,7 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>(add|addslashes|capfirst|center|cut|date|default|default_if_none|dictsort|dictsortreversed|divisibleby|escape|escapejs|filesizeformat|first|fix_ampersands|floatformat|force_escape|get_digit|iriencode|join|last|length|length_is|linebreaks|linebreaksbr|linenumbers|ljust|lower|make_list|phone2numeric|pluralize|pprint|random|removetags|rjust|safe|safeseq|slice|slugify|stringformat|striptags|time|timesince|timeutil|title|truncatewords|truncatewords_html|unordered_list|upper|urlencode|urlize|urlizetrunc|wordcount|wordwrap|yesno|apnumber|intcomma|intword|naturalday|ordinal)\b</string>
+					<string>(add|addslashes|capfirst|center|cut|date|default|default_if_none|dictsort|dictsortreversed|divisibleby|escape|escapejs|filesizeformat|first|fix_ampersands|floatformat|force_escape|get_digit|iriencode|join|last|length|length_is|linebreaks|linebreaksbr|linenumbers|ljust|lower|make_list|phone2numeric|pluralize|pprint|random|removetags|rjust|safe|safeseq|slice|slugify|stringformat|striptags|time|timesince|timeutil|title|truncatewords|truncatewords_html|unordered_list|upper|urlencode|urlize|urlizetrunc|wordcount|wordwrap|yesno|apnumber|intcomma|intword|naturalday|ordinal|STATIC_PREFIX)\b</string>
 					<key>name</key>
 					<string>keyword.control.filter.django</string>
 				</dict>
@@ -126,7 +126,7 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>\b(autoescape|endautoescape|block|endblock|blocktrans|endblocktrans|trans|plural|debug|extends|filter|firstof|for|empty|endfor|if|else|endif|include|ifchanged|endifchanged|ifequal|endifequal|ifnotequal|endifnotequal|load|from|low|regroup|ssi|spaceless|endspaceless|templatetag|widthratio|with|endwith|csrf_token|cycle|url|lorem|thumbnail)\b</string>
+					<string>\b(autoescape|endautoescape|block|endblock|blocktrans|endblocktrans|trans|plural|debug|extends|filter|firstof|for|empty|endfor|if|else|endif|include|ifchanged|endifchanged|ifequal|endifequal|ifnotequal|endifnotequal|load|from|low|regroup|ssi|spaceless|endspaceless|templatetag|widthratio|with|endwith|csrf_token|cycle|url|lorem|thumbnail|get_static_prefix)\b</string>
 					<key>name</key>
 					<string>keyword.control.tag-name.django</string>
 				</dict>
