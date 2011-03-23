@@ -12,7 +12,7 @@
 	<key>foldingStopMarker</key>
 	<string>({% (endblock|endcomment|endfor|endif|endifequal|endifnotequal|endspaceless|endwith|endblocktrans) %})</string>
 	<key>name</key>
-	<string>Django</string>
+	<string>HTML (Django)</string>
 	<key>patterns</key>
 	<array>
 		<dict>
