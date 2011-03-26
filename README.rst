@@ -70,35 +70,35 @@ Snippets for Django model fields
 =============== ======================================================
  Abbreviation                        Tag
 =============== ======================================================
- m_auto          ``models.AutoField()``
- m_bigint        ``models.BigIntegerField()``
- m_bool          ``models.BooleanField()``
- m_char          ``models.CharField()``
- m_coseint       ``models.CommaSeparatedIntegerField()``
- m_date          ``models.DateField()``
- m_datetime      ``models.DateTimeField()``
- m_decimal       ``models.DecimalField()``
- m_email         ``models.EmailField()``
- m_file          ``models.FileField()``
- m_filepath      ``models.FilePathField()``
- m_float         ``models.FloatField()``
- m_img           ``models.ImageField()``
- m_int           ``models.IntegerField()``
- m_ip            ``models.IPAddressField()``
- m_nullbool      ``models.NullBooleanField()``
- m_phone         ``models.PhoneNumberField()``
- m_posint        ``models.PositiveIntegerField()``
- m_possmallint   ``models.PositiveSmallIntegerField()``
- m_slug          ``models.SlugField()``
- m_smallint      ``models.SmallIntegerFiled()``
- m_text          ``models.TextField()``
- m_time          ``models.TimeField()``
- m_url           ``models.URLField()``
- m_usstate       ``models.USStateField()``
- m_xml           ``models.XMLField()``
- fk              ``models.ForeignKey()``
- m2m             ``models.ManyToManyField()``
- o2o             ``models.OneToOneField()``
+ mauto          ``models.AutoField()``
+ mbigint        ``models.BigIntegerField()``
+ mbool          ``models.BooleanField()``
+ mchar          ``models.CharField()``
+ mcoseint       ``models.CommaSeparatedIntegerField()``
+ mdate          ``models.DateField()``
+ mdatetime      ``models.DateTimeField()``
+ mdecimal       ``models.DecimalField()``
+ memail         ``models.EmailField()``
+ mfile          ``models.FileField()``
+ mfilepath      ``models.FilePathField()``
+ mfloat         ``models.FloatField()``
+ mimg           ``models.ImageField()``
+ mint           ``models.IntegerField()``
+ mip            ``models.IPAddressField()``
+ mnullbool      ``models.NullBooleanField()``
+ mphone         ``models.PhoneNumberField()``
+ mposint        ``models.PositiveIntegerField()``
+ mpossmallint   ``models.PositiveSmallIntegerField()``
+ mslug          ``models.SlugField()``
+ msmallint      ``models.SmallIntegerFiled()``
+ mtext          ``models.TextField()``
+ mtime          ``models.TimeField()``
+ murl           ``models.URLField()``
+ musstate       ``models.USStateField()``
+ mxml           ``models.XMLField()``
+ mfk            ``models.ForeignKey()``
+ mmtm           ``models.ManyToManyField()``
+ moto           ``models.OneToOneField()``
 =============== ======================================================
 
 Snippets for Django form fields
@@ -106,31 +106,31 @@ Snippets for Django form fields
 =============== ======================================================
  Abbreviation                        Tag
 =============== ======================================================
- f_char          ``forms.CharField()``
- f_choice        ``forms.ChoiceField()``
- f_combo         ``forms.ComboField()``
- f_date          ``forms.DateField()``
- f_datetime      ``forms.DateTime()``
- f_decimal       ``forms.DecimalField()``
- f_email         ``forms.EmailField()``
- f_file          ``forms.FileField()``
- f_filepath      ``forms.FilePathField()``
- f_float         ``forms.FloatField()``
- f_img           ``forms.ImageField()``
- f_int           ``forms.IntegerField()``
- f_ip            ``forms.IPAddressField()``
- f_mochoice      ``forms.ModelChoiceField()``
- f_momuchoice    ``forms.ModelMultipleChoiceField()``
- f_muchoice      ``forms.MultipleChoiceField()``
- f_muval         ``forms.MultipleValueField()``
- f_nullbool      ``forms.NullBooleanField()``
- f_regex         ``forms.RegexField()``
- f_slug          ``forms.SlugField()``
- f_sdatetime     ``forms.SplitDateTime()``
- f_time          ``forms.TimeField()``
- f_tchoice       ``forms.TypedChoiceField()``
- f_tmuchoice     ``forms.TypedMultipleChoiceField()``
- f_url           ``forms.URLField()``
+ fchar          ``forms.CharField()``
+ fchoice        ``forms.ChoiceField()``
+ fcombo         ``forms.ComboField()``
+ fdate          ``forms.DateField()``
+ fdatetime      ``forms.DateTime()``
+ fdecimal       ``forms.DecimalField()``
+ femail         ``forms.EmailField()``
+ ffile          ``forms.FileField()``
+ ffilepath      ``forms.FilePathField()``
+ ffloat         ``forms.FloatField()``
+ fimg           ``forms.ImageField()``
+ fint           ``forms.IntegerField()``
+ fip            ``forms.IPAddressField()``
+ fmochoice      ``forms.ModelChoiceField()``
+ fmomuchoice    ``forms.ModelMultipleChoiceField()``
+ fmuchoice      ``forms.MultipleChoiceField()``
+ fmuval         ``forms.MultipleValueField()``
+ fnullbool      ``forms.NullBooleanField()``
+ fregex         ``forms.RegexField()``
+ fslug          ``forms.SlugField()``
+ fsdatetime     ``forms.SplitDateTime()``
+ ftime          ``forms.TimeField()``
+ ftchoice       ``forms.TypedChoiceField()``
+ ftmuchoice     ``forms.TypedMultipleChoiceField()``
+ furl           ``forms.URLField()``
 =============== ======================================================
 
 Completions
