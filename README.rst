@@ -22,7 +22,7 @@ Snippets for Django templates
  autoescape      ``{% autoescape %} {% autoescape %}``
  block           ``{% block %} {% endblock %}``
  comment         ``{% comment %} {% endcomment %}``
- csrf_token      ``{% csrf_token %}``
+ csrf            ``{% csrf_token %}``
  cycle           ``{% cycle %}``
  debug           ``{% debug %}``
  ext             ``{% extends "" %}``
