@@ -1,7 +1,7 @@
 <!-- See http://www.sublimetext.com/docs/snippets for more information -->
 <snippet>
     <content><![CDATA[${1:FIELDNAME} = forms.SlugField($2)]]></content>
-    <tabTrigger>f_slug</tabTrigger>
+    <tabTrigger>fslug</tabTrigger>
     <scope>source.python</scope>
-    <description>SlugField (f_slug)</description>
+    <description>SlugField (fslug)</description>
 </snippet>

@@ -1,7 +1,7 @@
 <!-- See http://www.sublimetext.com/docs/snippets for more information -->
 <snippet>
     <content><![CDATA[${1:FIELDNAME} = forms.FloatField($2)]]></content>
-    <tabTrigger>f_float</tabTrigger>
+    <tabTrigger>ffloat</tabTrigger>
     <scope>source.python</scope>
-    <description>FloatField (f_float)</description>
+    <description>FloatField (ffloat)</description>
 </snippet>

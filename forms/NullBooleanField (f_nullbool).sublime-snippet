@@ -1,7 +1,7 @@
 <!-- See http://www.sublimetext.com/docs/snippets for more information -->
 <snippet>
     <content><![CDATA[${1:FIELDNAME} = forms.NullBooleanField($2)]]></content>
-    <tabTrigger>f_nullbool</tabTrigger>
+    <tabTrigger>fnullbool</tabTrigger>
     <scope>source.python</scope>
-    <description>NullBooleanField (f_nullbool)</description>
+    <description>NullBooleanField (fnullbool)</description>
 </snippet>

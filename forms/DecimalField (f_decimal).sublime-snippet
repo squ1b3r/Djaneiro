@@ -1,7 +1,7 @@
 <!-- See http://www.sublimetext.com/docs/snippets for more information -->
 <snippet>
     <content><![CDATA[${1:FIELDNAME} = forms.DecimalField($2)]]></content>
-    <tabTrigger>f_decimal</tabTrigger>
+    <tabTrigger>fdecimal</tabTrigger>
     <scope>source.python</scope>
-    <description>DecimalField (f_decimal)</description>
+    <description>DecimalField (fdecimal)</description>
 </snippet>

@@ -1,7 +1,7 @@
 <!-- See http://www.sublimetext.com/docs/snippets for more information -->
 <snippet>
     <content><![CDATA[${1:FIELDNAME} = forms.IntegerField($2)]]></content>
-    <tabTrigger>f_int</tabTrigger>
+    <tabTrigger>fint</tabTrigger>
     <scope>source.python</scope>
-    <description>IntegerField (f_int)</description>
+    <description>IntegerField (fint)</description>
 </snippet>

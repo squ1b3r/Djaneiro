@@ -1,7 +1,7 @@
 <!-- See http://www.sublimetext.com/docs/snippets for more information -->
 <snippet>
     <content><![CDATA[${1:FIELDNAME} = forms.SplitDateTimeField($2)]]></content>
-    <tabTrigger>f_sdatetime</tabTrigger>
+    <tabTrigger>fsdatetime</tabTrigger>
     <scope>source.python</scope>
-    <description>SplitDateTimeField (f_sdatetime)</description>
+    <description>SplitDateTimeField (fsdatetime)</description>
 </snippet>

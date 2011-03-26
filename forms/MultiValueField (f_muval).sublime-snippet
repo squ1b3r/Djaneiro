@@ -1,7 +1,7 @@
 <!-- See http://www.sublimetext.com/docs/snippets for more information -->
 <snippet>
     <content><![CDATA[${1:FIELDNAME} = forms.MultiValueField($2)]]></content>
-    <tabTrigger>f_muval</tabTrigger>
+    <tabTrigger>fmuval</tabTrigger>
     <scope>source.python</scope>
-    <description>MultiValueField (f_muval)</description>
+    <description>MultiValueField (fmuval)</description>
 </snippet>

@@ -1,7 +1,7 @@
 <!-- See http://www.sublimetext.com/docs/snippets for more information -->
 <snippet>
     <content><![CDATA[${1:FIELDNAME} = forms.ImageField($2)]]></content>
-    <tabTrigger>f_img</tabTrigger>
+    <tabTrigger>fimg</tabTrigger>
     <scope>source.python</scope>
-    <description>ImageField (f_img)</description>
+    <description>ImageField (fimg)</description>
 </snippet>

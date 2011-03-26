@@ -1,7 +1,7 @@
 <!-- See http://www.sublimetext.com/docs/snippets for more information -->
 <snippet>
     <content><![CDATA[${1:FIELDNAME} = forms.DateField($2)]]></content>
-    <tabTrigger>f_date</tabTrigger>
+    <tabTrigger>fdate</tabTrigger>
     <scope>source.python</scope>
-    <description>DateField (f_date)</description>
+    <description>DateField (fdate)</description>
 </snippet>

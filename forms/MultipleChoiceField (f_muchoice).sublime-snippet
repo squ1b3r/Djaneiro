@@ -1,7 +1,7 @@
 <!-- See http://www.sublimetext.com/docs/snippets for more information -->
 <snippet>
     <content><![CDATA[${1:FIELDNAME} = forms.MultipleChoiceField($2)]]></content>
-    <tabTrigger>f_muchoice</tabTrigger>
+    <tabTrigger>fmuchoice</tabTrigger>
     <scope>source.python</scope>
-    <description>MultipleChoiceField (f_muchoice)</description>
+    <description>MultipleChoiceField (fmuchoice)</description>
 </snippet>
