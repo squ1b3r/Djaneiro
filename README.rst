@@ -62,6 +62,7 @@ Snippets for Django templates
  extrahead       ``{% block extrahead %} {% endblock extrahead %}``
  extrastyle      ``{% block extrastyle %} {% endblock extrastyle %}``
  var		     ``{{ }}``
+ tag		     ``{% %}``
 =============== ======================================================
 
 Snippets for Django model fields
