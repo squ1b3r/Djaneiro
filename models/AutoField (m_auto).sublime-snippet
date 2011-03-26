@@ -1,7 +1,7 @@
 <!-- See http://www.sublimetext.com/docs/snippets for more information -->
 <snippet>
 	<content><![CDATA[${1:FIELDNAME} = models.AutoField($2)]]></content>
-	<tabTrigger>m_auto</tabTrigger>
+	<tabTrigger>mauto</tabTrigger>
     <scope>source.python</scope>
-    <description>AutoField (m_auto)</description>
+    <description>AutoField (mauto)</description>
 </snippet>

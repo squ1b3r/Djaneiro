@@ -1,7 +1,7 @@
 <!-- See http://www.sublimetext.com/docs/snippets for more information -->
 <snippet>
     <content><![CDATA[${1:FIELDNAME} = models.PhoneNumberField($2)]]></content>
-    <tabTrigger>m_phone</tabTrigger>
+    <tabTrigger>mphone</tabTrigger>
     <scope>source.python</scope>
-    <description>PhoneNumberField (m_phone)</description>
+    <description>PhoneNumberField (mphone)</description>
 </snippet>

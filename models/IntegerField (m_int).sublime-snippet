@@ -1,7 +1,7 @@
 <!-- See http://www.sublimetext.com/docs/snippets for more information -->
 <snippet>
     <content><![CDATA[${1:FIELDNAME} = models.IntegerField($2)]]></content>
-    <tabTrigger>m_int</tabTrigger>
+    <tabTrigger>mint</tabTrigger>
     <scope>source.python</scope>
-    <description>IntegerField (m_int)</description>
+    <description>IntegerField (mint)</description>
 </snippet>

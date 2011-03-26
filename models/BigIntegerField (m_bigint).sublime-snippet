@@ -1,7 +1,7 @@
 <!-- See http://www.sublimetext.com/docs/snippets for more information -->
 <snippet>
     <content><![CDATA[${1:FIELDNAME} = models.BigIntegerField($2)]]></content>
-    <tabTrigger>m_bigint</tabTrigger>
+    <tabTrigger>mbigint</tabTrigger>
     <scope>source.python</scope>
-    <description>BigIntegerField (m_bigint)</description>
+    <description>BigIntegerField (mbigint)</description>
 </snippet>

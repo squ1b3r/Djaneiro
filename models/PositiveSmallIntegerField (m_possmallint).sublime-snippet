@@ -1,7 +1,7 @@
 <!-- See http://www.sublimetext.com/docs/snippets for more information -->
 <snippet>
     <content><![CDATA[${1:FIELDNAME} = models.PositiveSmallIntegerField($2)]]></content>
-    <tabTrigger>m_possmallint</tabTrigger>
+    <tabTrigger>mpossmallint</tabTrigger>
     <scope>source.python</scope>
-    <description>PositiveSmallIntegerField (m_possmallint)</description>
+    <description>PositiveSmallIntegerField (mpossmallint)</description>
 </snippet>

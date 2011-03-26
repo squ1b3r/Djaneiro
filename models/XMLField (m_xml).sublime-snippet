@@ -1,7 +1,7 @@
 <!-- See http://www.sublimetext.com/docs/snippets for more information -->
 <snippet>
     <content><![CDATA[${1:FIELDNAME} = models.XMLField($2)]]></content>
-    <tabTrigger>m_xml</tabTrigger>
+    <tabTrigger>mxml</tabTrigger>
     <scope>source.python</scope>
-    <description>XMLField (m_xml)</description>
+    <description>XMLField (mxml)</description>
 </snippet>
