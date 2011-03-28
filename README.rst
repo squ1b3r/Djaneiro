@@ -63,6 +63,7 @@ Snippets for Django templates
  extrastyle      ``{% block extrastyle %} {% endblock extrastyle %}``
  var		     ``{{ }}``
  tag		     ``{% %}``
+ static          ``{{ STATIC_URL }}``
 =============== ======================================================
 
 Snippets for Django model fields
