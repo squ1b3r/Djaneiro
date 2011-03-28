@@ -97,9 +97,9 @@ Snippets for Django model fields
  murl           ``models.URLField()``
  musstate       ``models.USStateField()``
  mxml           ``models.XMLField()``
- mfk            ``models.ForeignKey()``
- mmtm           ``models.ManyToManyField()``
- moto           ``models.OneToOneField()``
+ fk            ``models.ForeignKey()``
+ m2m           ``models.ManyToManyField()``
+ o2o           ``models.OneToOneField()``
 =============== ======================================================
 
 Snippets for Django form fields
