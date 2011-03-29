@@ -64,6 +64,7 @@ Snippets for Django templates
  var		     ``{{ }}``
  tag		     ``{% %}``
  static          ``{{ STATIC_URL }}``
+ media           ``{{ MEDIA_URL }}``
 =============== ======================================================
 
 Snippets for Django model fields
@@ -97,9 +98,9 @@ Snippets for Django model fields
  murl           ``models.URLField()``
  musstate       ``models.USStateField()``
  mxml           ``models.XMLField()``
- fk            ``models.ForeignKey()``
- m2m           ``models.ManyToManyField()``
- o2o           ``models.OneToOneField()``
+ fk             ``models.ForeignKey()``
+ m2m            ``models.ManyToManyField()``
+ o2o            ``models.OneToOneField()``
 =============== ======================================================
 
 Snippets for Django form fields
