@@ -1,0 +1,26 @@
+<!-- See http://www.sublimetext.com/docs/snippets for more information -->
+<snippet>
+    <content><![CDATA[
+class ${1:MODELNAME}(models.Model):
+    ${2:# TODO: Defne fields here}
+
+    class Meta:
+        verbose_name = _('$1')
+        verbose_name_plural = _('$1s')
+
+    def __unicode__(self):
+        pass
+    
+    def save(self):
+        pass
+    
+    def get_absolute_url(self):
+        pass
+    
+    ${3:# TODO: Defne custom methods here}
+
+    ]]></content>
+    <tabTrigger>Model_full</tabTrigger>
+    <scope>source.python</scope>
+    <description>Model (full)</description>
+</snippet>
