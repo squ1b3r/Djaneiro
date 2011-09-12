@@ -1,0 +1,9 @@
+<!-- See http://www.sublimetext.com/docs/snippets for more information -->
+<snippet>
+    <content><![CDATA[class ${1:FORMNAME}(forms.Form):
+        ${2:# TODO: Define form fields here}
+    ]]></content>
+    <tabTrigger>Form</tabTrigger>
+    <scope>source.python</scope>
+    <description>Form</description>
+</snippet>

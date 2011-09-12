@@ -1,0 +1,15 @@
+<!-- See http://www.sublimetext.com/docs/snippets for more information -->
+<snippet>
+    <content><![CDATA[
+class ${1:MODELNAME}(models.Model):
+    class Meta:
+        verbose_name = _('$1')
+        verbose_name_plural = _('$1s')
+
+    def __unicode__(self):
+        pass
+    ]]></content>
+    <tabTrigger>Model</tabTrigger>
+    <scope>source.python</scope>
+    <description>Model</description>
+</snippet>
