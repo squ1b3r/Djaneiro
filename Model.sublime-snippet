@@ -8,13 +8,6 @@ class ${1:MODELNAME}(models.Model):
 
     def __unicode__(self):
         pass
-    
-    def save(self):
-        pass
-    
-    def get_absolute_url(self):
-        pass
-    
     ]]></content>
     <tabTrigger>Model</tabTrigger>
     <scope>source.python</scope>
