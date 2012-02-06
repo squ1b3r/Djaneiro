@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>fileTypes</key>
 	<array>
 		<string>html</string>
-		<string>dhtml</string>
 	</array>
-	<key>foldingStartMarker</key>
-	<string>({% (block|comment|for|if|ifequal|ifnotequal|spaceless|with|blocktrans) %})</string>
-	<key>foldingStopMarker</key>
-	<string>({% (endblock|endcomment|endfor|endif|endifequal|endifnotequal|endspaceless|endwith|endblocktrans) %})</string>
 	<key>name</key>
 	<string>HTML (Django)</string>
 	<key>patterns</key>
@@ -142,6 +137,6 @@
 	<key>scopeName</key>
 	<string>text.html.django</string>
 	<key>uuid</key>
-	<string>F4B0A70C-ECF6-4660-BC26-785216E3CF02</string>
+	<string>242231db-3479-4214-91e9-3ac864c1dc88</string>
 </dict>
 </plist>
