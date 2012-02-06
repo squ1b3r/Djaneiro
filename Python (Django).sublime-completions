@@ -36,23 +36,6 @@
 		{ "trigger": "widget", "contents": "widget=$1" },
 		{ "trigger": "localized", "contents": "localized=$1" },
 
-/// VIEWS
-		{ "trigger": "return", "contents": "return" },
-		{ "trigger": "render_to_response", "contents": "render_to_response" },
-		{ "trigger": "direct_to_template", "contents": "direct_to_template" },
-		{ "trigger": "RequestContext", "contents": "RequestContext" },
-		{ "trigger": "context_instance", "contents": "context_instance" },
-		{ "trigger": "get_object_or_404", "contents": "get_object_or_404"},
-		{ "trigger": "get_list_or_404", "contents": "get_list_or_404" },
-		{ "trigger": "render", "contents": "render" },
-		{ "trigger": "redirect", "contents": "redirect" },
-		{ "trigger": "render_to_response()", "contents": "render_to_response('${1:template}', {$2}, context_instance=RequestContext(request))" },
-		{ "trigger": "direct_to_template()", "contents": "direct_to_template('${1:template}', {$2})" },
-		{ "trigger": "render()", "contents": "render(request, ${1:template})" },
-		{ "trigger": "redirect()", "contents": "redirect(${1:to})" },
-		{ "trigger": "get_object_or_404()", "contents": "get_object_or_404(${1:klass}, ${2:**kwargs})" },
-		{ "trigger": "get_list_or_404()", "contents": "get_list_or_404(${1:klass}, ${2:**kwargs})" },
-
 /// SETTINGS
 	/// Available settings
 		{ "trigger": "ABSOLUTE_URL_OVERRIDES", "contents": "ABSOLUTE_URL_OVERRIDES${1: = \\{$2\\}}" },
@@ -180,7 +163,6 @@
 		{ "trigger": "USE_THOUSAND_SEPARATOR", "contents": "USE_THOUSAND_SEPARATOR${1: = ${2:False}}" },
 		{ "trigger": "YEAR_MONTH_FORMAT", "contents": "YEAR_MONTH_FORMAT${1: = '${2:F Y}'}" },
 
-/// New in 1.3
 		{ "trigger": "CACHES", "contents": "CACHES${1: = \\{${2:'$3': \\{$4\\}}\\}}" },
 
 		//CACHES
@@ -195,22 +177,7 @@
 		{ "trigger": "STATIC_URL", "contents": "STATIC_URL${1: = ${2:'$3'}}" },
 		{ "trigger": "STATICFILES_DIRS", "contents": "STATICFILES_DIRS${1: = (${2:'$3'},)}" },
 		{ "trigger": "STATICFILES_STORAGE", "contents": "STATICFILES_STORAGE${1: = ${2:'$3'}}" },
-		{ "trigger": "STATICFILES_FINDERS", "contents": "STATICFILES_FINDERS${1: = (${2:'$3'},)}" },
+		{ "trigger": "STATICFILES_FINDERS", "contents": "STATICFILES_FINDERS${1: = (${2:'$3'},)}" }
 		// end of CACHES
-
-/// Deprecated settings
-		{ "trigger": "DATABASE_ENGINE", "contents": "DATABASE_ENGINE" },
-		{ "trigger": "DATABASE_HOST", "contents": "DATABASE_HOST" },
-		{ "trigger": "DATABASE_NAME", "contents": "DATABASE_NAME" },
-		{ "trigger": "DATABASE_OPTIONS", "contents": "DATABASE_OPTIONS" },
-		{ "trigger": "DATABASE_PASSWORD", "contents": "DATABASE_PASSWORD" },
-		{ "trigger": "DATABASE_PORT", "contents": "DATABASE_PORT" },
-		{ "trigger": "DATABASE_USER", "contents": "DATABASE_USER" },
-		{ "trigger": "TEST_DATABASE_CHARSET", "contents": "TEST_DATABASE_CHARSET" },
-		{ "trigger": "TEST_DATABASE_COLLATION", "contents": "TEST_DATABASE_COLLATION" },
-		{ "trigger": "TEST_DATABASE_NAME", "contents": "TEST_DATABASE_NAME" },
-
-		//Deprecated in Django 1.3
-		{ "trigger": "CACHE_BACKEND", "contents": "CACHE_BACKEND${1: = '$2'}" }
 	]
 }

@@ -1,0 +1,7 @@
+<!-- See http://www.sublimetext.com/docs/snippets for more information -->
+<snippet>
+    <content><![CDATA[${1:FIELDNAME} = forms.BooleanField($2)]]></content>
+    <tabTrigger>fbool</tabTrigger>
+    <scope>source.python</scope>
+    <description>BooleanField (fbool)</description>
+</snippet>
