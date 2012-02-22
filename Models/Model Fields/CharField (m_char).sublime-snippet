@@ -1,6 +1,6 @@
 <!-- See http://www.sublimetext.com/docs/snippets for more information -->
 <snippet>
-    <content><![CDATA[${1:FIELDNAME} = models.CharField($2)]]></content>
+    <content><![CDATA[${1:FIELDNAME} = models.CharField(max_length=${2:50})]]></content>
     <tabTrigger>mchar</tabTrigger>
     <scope>source.python</scope>
     <description>CharField (mchar)</description>
