@@ -1,7 +1,7 @@
 <!-- See http://www.sublimetext.com/docs/snippets for more information -->
 <snippet>
     <content><![CDATA[urlpatterns += patterns('',
-	url(r'^${1:NEWPATTER}', include(${2:extra_patterns})),
+	url(r'^${1:regex}', include(${2:extra_patterns})),
 )]]></content>
     <tabTrigger>UrlPInc+</tabTrigger>
     <scope>source.python</scope>
