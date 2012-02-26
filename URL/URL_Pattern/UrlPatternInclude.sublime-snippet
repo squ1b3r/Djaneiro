@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[url(r'^${1:regex}', include(${2:extra_patterns})),]]></content>
+    <tabTrigger>urlInc</tabTrigger>
+    <scope>source.python</scope>
+    <description>url(include()) pattern</description>
+</snippet>

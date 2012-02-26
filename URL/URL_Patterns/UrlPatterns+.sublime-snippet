@@ -1,0 +1,9 @@
+<!-- See http://www.sublimetext.com/docs/snippets for more information -->
+<snippet>
+    <content><![CDATA[urlpatterns += patterns('',
+	url(r'^${1:regex}', ${2:view}, kwargs=${3:None}, name=${4:None}, prefix='${5:}'),
+)]]></content>
+    <tabTrigger>UrlP+</tabTrigger>
+    <scope>source.python</scope>
+    <description>urlpatterns +=</description>
+</snippet>

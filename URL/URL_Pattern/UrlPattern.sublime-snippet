@@ -1,0 +1,7 @@
+<!-- See http://www.sublimetext.com/docs/snippets for more information -->
+<snippet>
+    <content><![CDATA[url(r'^${1:regex}', ${2:view}, kwargs=${3:None}, name=${4:None}, prefix='${5:}'),]]></content>
+    <tabTrigger>url</tabTrigger>
+    <scope>source.python</scope>
+    <description>url() pattern</description>
+</snippet>
