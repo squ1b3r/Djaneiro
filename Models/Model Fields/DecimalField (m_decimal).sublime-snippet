@@ -1,6 +1,6 @@
 <!-- See http://www.sublimetext.com/docs/snippets for more information -->
 <snippet>
-    <content><![CDATA[${1:FIELDNAME} = models.DecimalField($2)]]></content>
+    <content><![CDATA[${1:FIELDNAME} = models.DecimalField($2, max_digits={$3:5}, decimal_places={$4:2})]]></content>
     <tabTrigger>mdecimal</tabTrigger>
     <scope>source.python</scope>
     <description>DecimalField (mdecimal)</description>
