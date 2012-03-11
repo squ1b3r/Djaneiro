@@ -1,0 +1,7 @@
+<!-- See http://www.sublimetext.com/docs/snippets for more information -->
+<snippet>
+	<content><![CDATA[{% else %}]]></content>
+    <tabTrigger>else</tabTrigger>
+    <scope>text.html.django</scope>
+    <description>else</description>
+</snippet>
