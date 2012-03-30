@@ -1,6 +1,6 @@
 <!-- See http://www.sublimetext.com/docs/snippets for more information -->
 <snippet>
-	<content><![CDATA[{% trans ${1:"${2:string to translate}"} %}]]></content>
+    <content><![CDATA[{% trans "${1:$SELECTION}" %}]]></content>
     <tabTrigger>trans</tabTrigger>
     <scope>text.html.django</scope>
     <description>trans</description>
