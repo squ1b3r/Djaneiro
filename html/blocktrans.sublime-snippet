@@ -1,6 +1,10 @@
 <!-- See http://www.sublimetext.com/docs/snippets for more information -->
 <snippet>
-    <content><![CDATA[{% blocktrans %}$SELECTION{% endblocktrans %}]]></content>
+    <content><![CDATA[
+{% blocktrans %}
+    ${1:$SELECTION}
+{% endblocktrans %}
+]]> </content>
     <tabTrigger>blocktrans</tabTrigger>
     <scope>text.html.django</scope>
     <description>blocktrans</description>
