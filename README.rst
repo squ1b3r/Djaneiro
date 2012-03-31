@@ -14,6 +14,8 @@ Installation
  - Windows: %APPDATA%/Sublime Text 2/Packages/
  - Linux: ~/.config/sublime-text-2/Packages
 
+Or use PackageControl.
+
 Snippets for Django templates
 ------------------------------
 =============== ======================================================
