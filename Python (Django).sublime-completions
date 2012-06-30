@@ -1,5 +1,5 @@
 {
-	"scope": "source.python",
+	"scope": "source.python.django",
 
 	"completions":
 	[
@@ -26,9 +26,9 @@
 		{ "trigger": "auto_now", "contents": "auto_now=${1:True}" },
 		{ "trigger": "max_length", "contents": "max_length=$1" },
 
-		{ "trigger": "unique_together", "contents": "unique_together = ('$1',)" },
-		{ "trigger": "verbose_name = ", "contents": "verbose_name = u'$1'" },
-		{ "trigger": "verbose_name_plural", "contents": "verbose_name_plural = u'$1'" },
+		{ "trigger": "meta_ut", "contents": "unique_together = ('$1',)" },
+		{ "trigger": "meta_vn", "contents": "verbose_name = u'$1'" },
+		{ "trigger": "meta_vnp", "contents": "verbose_name_plural = u'$1'" },
 
 		{ "trigger": "required", "contents": "required=${1:True}" },
 		{ "trigger": "label", "contents": "label='$1'" },
