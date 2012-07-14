@@ -102,6 +102,14 @@
 					<string>storage.type.attr.django</string>
 				</dict>
 				<dict>
+                                        <key>begin</key>
+                                        <string>:'|'</string>
+                                        <key>end</key>
+                                        <string>'</string>
+                                        <key>name</key>
+                                        <string>storage.type.attr.django</string>
+                                </dict>
+				<dict>
 					<key>match</key>
 					<string>\|</string>
 					<key>name</key>
