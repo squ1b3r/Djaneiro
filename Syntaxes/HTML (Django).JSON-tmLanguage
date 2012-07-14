@@ -53,6 +53,11 @@
                     "end": "\""
                 },
                 {
+                    "name": "storage.type.attr.django",
+                    "begin": ":\\'|\\'",
+                    "end": "\\'"
+                },
+                {
                     "name": "string.unquoted.filter-pipe.django",
                     "match": "\\|"
                 },
