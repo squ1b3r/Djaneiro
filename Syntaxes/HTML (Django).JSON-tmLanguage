@@ -63,7 +63,7 @@
                 },
                 {
                     "name": "string.unquoted.tag-string.django",
-                    "match": "[a-zA-Z_.]+"
+                    "match": "[a-zA-Z0-9_.]+"
                 }
             ]
         },
