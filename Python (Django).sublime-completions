@@ -14,7 +14,7 @@
 		{ "trigger": "related_name", "contents": "related_name='$1'" },
 		{ "trigger": "editable", "contents": "editable=${1:False}" },
 		{ "trigger": "error_message", "contents": "error_message='$1'" },
-		{ "trigger": "help_message", "contents": "help_message='$1'" },
+		{ "trigger": "help_text", "contents": "help_text='$1'" },
 		{ "trigger": "primary_key", "contents": "primary_key=${1:True}" },
 		{ "trigger": "unique", "contents": "unique=${1:True}" },
 		{ "trigger": "unique_for_date", "contents": "unique_for_date='$1'" },
