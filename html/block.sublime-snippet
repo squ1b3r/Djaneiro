@@ -2,7 +2,7 @@
 <snippet>
 	<content><![CDATA[
 {% block ${1:blockname} %}
-	$2
+	${2:$SELECTION}
 {% endblock ${1:blockname} %}
 ]]>	</content>
     <tabTrigger>block</tabTrigger>

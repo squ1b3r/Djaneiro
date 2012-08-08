@@ -2,7 +2,7 @@
 <snippet>
 	<content><![CDATA[
 {% ifchanged $1 %}
-	$2
+	${2:$SELECTION}
 {% endifchanged %}
 ]]>	</content>
     <tabTrigger>ifchanged</tabTrigger>
