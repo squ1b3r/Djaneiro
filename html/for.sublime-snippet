@@ -2,7 +2,7 @@
 <snippet>
 	<content><![CDATA[
 {% for $1 in $2 %}
-	$3
+	${3:$SELECTION}
 {% endfor %}
 ]]>	</content>
     <tabTrigger>for</tabTrigger>

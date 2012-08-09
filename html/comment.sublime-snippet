@@ -2,7 +2,7 @@
 <snippet>
 	<content><![CDATA[
 {% comment %}
-	$1
+	${1:$SELECTION}
 {% endcomment %}
 ]]>	</content>
     <tabTrigger>comment</tabTrigger>

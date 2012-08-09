@@ -1,6 +1,6 @@
 <!-- See http://www.sublimetext.com/docs/snippets for more information -->
 <snippet>
-	<content><![CDATA[{% extends "$1" %}]]></content>
+	<content><![CDATA[{% extends "${1:$SELECTION}" %}]]></content>
     <tabTrigger>ext</tabTrigger>
     <scope>text.html.django</scope>
     <description>extends (ext)</description>

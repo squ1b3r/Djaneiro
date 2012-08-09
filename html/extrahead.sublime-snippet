@@ -2,7 +2,7 @@
 <snippet>
 	<content><![CDATA[
 {% block extrahead %}
-    $1
+    ${1:$SELECTION}
 {% endblock extrahead %}
 ]]>	</content>
     <tabTrigger>extrahead</tabTrigger>
