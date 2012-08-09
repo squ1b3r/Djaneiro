@@ -2,7 +2,7 @@
 <snippet>
 	<content><![CDATA[
 {% with $1 as $2 %}
-    $3
+    ${3:$SELECTION}
 {% endwith %}
 ]]>	</content>
     <tabTrigger>with</tabTrigger>

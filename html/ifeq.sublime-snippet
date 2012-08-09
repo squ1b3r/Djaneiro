@@ -2,7 +2,7 @@
 <snippet>
 	<content><![CDATA[
 {% ifequal $1 $2 %}
-	$3
+	${3:$SELECTION}
 {% endifequal %}
 ]]>	</content>
     <tabTrigger>ifeq</tabTrigger>

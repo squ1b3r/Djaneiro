@@ -2,7 +2,7 @@
 <snippet>
 	<content><![CDATA[
 {% spaceless %}
-	$1
+	${1:$SELECTION}
 {% endspaceless %}
 ]]>	</content>
     <tabTrigger>spaceless</tabTrigger>

@@ -2,7 +2,7 @@
 <snippet>
 	<content><![CDATA[
 {% block extrastyle %}
-    $1
+    ${1:$SELECTION}
 {% endblock extrastyle %}
 ]]>	</content>
     <tabTrigger>extrastyle</tabTrigger>
