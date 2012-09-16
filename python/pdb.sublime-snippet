@@ -1,7 +1,6 @@
 <!-- See http://www.sublimetext.com/docs/snippets for more information -->
 <snippet>
-    <content><![CDATA[import pdb
-pdb.set_trace()]]></content>
+    <content><![CDATA[import pdb; pdb.set_trace()]]></content>
     <tabTrigger>pdb</tabTrigger>
     <scope>source.python</scope>
     <description>pdb debug tool</description>
