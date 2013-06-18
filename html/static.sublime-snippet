@@ -1,6 +1,6 @@
 <!-- See http://www.sublimetext.com/docs/snippets for more information -->
 <snippet>
-    <content><![CDATA[{{ STATIC_URL }}]]> </content>
+    <content><![CDATA[{% static "${1:$SELECTION}" %}]]></content>
     <tabTrigger>static</tabTrigger>
     <scope>text.html.django</scope>
     <description>static</description>
