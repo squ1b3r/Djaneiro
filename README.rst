@@ -47,6 +47,7 @@ Snippets for Django templates
  regroup         ``{% regroup by as %}``
  spaceless       ``{% spaceless %} {% endspaceless %}``
  ssi             ``{% ssi %}``
+ static          ``{% static %}``
  templatetag     ``{% templatetag %}``
  url             ``{% url %}``
  widthratio      ``{% widthratio %}``
@@ -65,7 +66,7 @@ Snippets for Django templates
  extrastyle      ``{% block extrastyle %} {% endblock extrastyle %}``
  var		     ``{{ }}``
  tag		     ``{% %}``
- static          ``{{ STATIC_URL }}``
+ staticu         ``{{ STATIC_URL }}``
  media           ``{{ MEDIA_URL }}``
 =============== ======================================================
 
