@@ -1,0 +1,12 @@
+<!-- See http://www.sublimetext.com/docs/snippets for more information -->
+<snippet>
+    <content><![CDATA[
+class ${1:TESTNAME}(TestCase):
+	def ${2:test_basic_addition}(self):
+	   	# TODO: Define ${2:test_basic_addition} conditions here}
+	   	self.assertEqual(${3:1 + 1, 2})
+	   	]]></content>
+    <tabTrigger>Test</tabTrigger>
+    <scope>source.python</scope>
+    <description>Simple Test</description>
+</snippet>
