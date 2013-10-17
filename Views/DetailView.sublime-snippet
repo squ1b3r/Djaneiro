@@ -1,8 +1,8 @@
 <snippet>
 	<content><![CDATA[
-class ${1:ModelName}DetailView(DetailView):
-    model = ${1:ModelName}
-    template_name = "${2:TemplateName}"
+class ${1:MODEL_NAME}DetailView(DetailView):
+    model = ${1:MODEL_NAME}
+    template_name = "${2:TEMPLATE_NAME}"
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>detailview</tabTrigger>

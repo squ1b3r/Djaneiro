@@ -1,7 +1,7 @@
 <snippet>
 	<content><![CDATA[
-class ${1:ClassName}(TemplateView):
-    template_name = "${2:TemplateName}"
+class ${1:CLASS_NAME}(TemplateView):
+    template_name = "${2:TEMPLATE_NAME}"
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>templateview</tabTrigger>
