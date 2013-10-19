@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+def get_context_data(self, **kwargs):
+    context = super(${1:CLASS_NAME}, self).get_context_data(**kwargs)
+    return context
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>context</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.python</scope>
+</snippet>

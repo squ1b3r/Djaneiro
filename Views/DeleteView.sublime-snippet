@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+class ${1:MODEL_NAME}DeleteView(DeleteView):
+    model = ${1:MODEL_NAME}
+    template_name = "${2:TEMPLATE_NAME}"
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>deleteview</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.python</scope>
+</snippet>
