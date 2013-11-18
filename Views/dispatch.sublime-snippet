@@ -1,7 +1,7 @@
 <snippet>
 	<content><![CDATA[
 def dispatch(self, request, *args, **kwargs):
-    super(${1:CLASS_NAME}, self).dispatch(request, *args, **kwargs)
+    return super(${1:CLASS_NAME}, self).dispatch(request, *args, **kwargs)
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>dispatch</tabTrigger>
