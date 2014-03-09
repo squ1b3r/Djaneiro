@@ -1,5 +1,5 @@
 ==================================
-Django support for Sublime Text 2
+Django support for Sublime Text 2/3
 ==================================
 Overview
 --------
