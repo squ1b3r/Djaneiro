@@ -153,6 +153,18 @@ Snippets for Django Views
  get_context_data   ``get_context_data method for CBVs``
 =================== ======================================================
 
+Snippets for Python
+--------------------------------
+=================== ======================================================
+ Abbreviation                        Tag
+=================== ======================================================
+ pdb                ``import pdb ; pdb.set_trace()``
+ ipdb               ``import ipdb ; ipdb.set_trace()``
+ npdb               ``from nose.tools import set_trace; set_trace()``
+ traceback          ``import traceback; traceback.print_exc();``
+ utfc               ``coding: utf-8 ``
+=================== ======================================================
+
 Completions
 ------------
 
