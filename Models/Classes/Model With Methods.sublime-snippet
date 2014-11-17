@@ -8,7 +8,7 @@ class ${1:MODELNAME}(models.Model):
         verbose_name = "$1"
         verbose_name_plural = "$1s"
 
-    def __unicode__(self):
+    def __str__(self):
         pass
 
     def save(self):
