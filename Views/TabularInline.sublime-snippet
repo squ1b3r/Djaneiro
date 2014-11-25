@@ -13,5 +13,5 @@ class ${1}Inline(admin.TabularInline):
 ]]></content>
     <tabTrigger>tabularinline</tabTrigger>
     <scope>source.python</scope>
-    <description>Stacked Inline</description>
+    <description>Tabular Inline</description>
 </snippet>
