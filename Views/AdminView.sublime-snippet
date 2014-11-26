@@ -1,0 +1,21 @@
+<snippet>
+    <content><![CDATA[
+class ${1}Admin(admin.ModelAdmin):
+        '''
+            Admin View for ${1}
+        '''
+        list_display = ('${2}',)
+        list_filter = ('${3}',)
+        inlines = [
+            ${4}Inline,
+        ]
+        raw_id_fields = ('${5}',)
+        readonly_fields = ('${6}',)
+        search_fields = ['${7}']
+
+admin.register(${1}, ${1}Admin)
+]]></content>
+    <tabTrigger>adminview</tabTrigger>
+    <scope>source.python</scope>
+    <description>Model Admin View</description>
+</snippet>

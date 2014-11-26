@@ -1,0 +1,17 @@
+<snippet>
+    <content><![CDATA[
+class ${1}Inline(admin.TabularInline):
+        '''
+            Tabular Inline View for ${1}
+        '''
+      model = ${2:${1}}
+      min_num = ${3:3}
+      max_num = ${4:20}
+      extra = ${5:1}
+      raw_id_fields = (${6},)
+
+]]></content>
+    <tabTrigger>tabularinline</tabTrigger>
+    <scope>source.python</scope>
+    <description>Tabular Inline</description>
+</snippet>
