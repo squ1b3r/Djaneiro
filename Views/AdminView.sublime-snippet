@@ -13,7 +13,7 @@ class ${1}Admin(admin.ModelAdmin):
         readonly_fields = ('${6}',)
         search_fields = ['${7}']
 
-admin.register(${1}, ${1}Admin)
+admin.site.register(${1}, ${1}Admin)
 ]]></content>
     <tabTrigger>adminview</tabTrigger>
     <scope>source.python</scope>
