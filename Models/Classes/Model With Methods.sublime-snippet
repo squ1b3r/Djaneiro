@@ -18,7 +18,7 @@ class ${1:MODELNAME}(models.Model):
     def get_absolute_url(self):
         return ('')
 
-    ${3:# TODO: Defne custom methods here}
+    ${3:# TODO: Define custom methods here}
 
     ]]></content>
     <tabTrigger>Model_full</tabTrigger>
