@@ -145,6 +145,7 @@ Snippets for Django Views
 =================== ======================================================
  view               ``Function Based View``
  createview         ``Generic Create View``
+ updateview         ``Generic Update View``
  deleteview         ``Generic Delete View``
  detailview         ``Generic Detail View``
  listview           ``Generic List View``
@@ -170,6 +171,7 @@ Snippets for Python
 =================== ======================================================
  Abbreviation                        Tag
 =================== ======================================================
+ __init__           ``__init__(self, *args, **kwargs)``
  pdb                ``import pdb ; pdb.set_trace()``
  ipdb               ``import ipdb ; ipdb.set_trace()``
  npdb               ``from nose.tools import set_trace; set_trace()``
