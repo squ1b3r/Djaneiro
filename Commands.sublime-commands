@@ -1,0 +1,6 @@
+[
+    {
+        "caption": "Django: Create New Project (relative to Open File)",
+        "command": "relativedjango"
+    }
+    ]
