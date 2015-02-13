@@ -50,4 +50,19 @@
             }
         ]
     }
+    {
+        "caption": "Tools",
+        "mnemonic": "t",
+        "id": "tools",
+
+        "children":
+        [
+            {
+                "caption":"New Django Site",
+                "command" : "relativedjango"
+
+            }
+
+        ]
+    }
 ]
