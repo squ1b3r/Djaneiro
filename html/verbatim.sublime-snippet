@@ -1,0 +1,11 @@
+<!-- See http://www.sublimetext.com/docs/snippets for more information -->
+<snippet>
+	<content><![CDATA[
+{% verbatim %}
+	${1:$SELECTION}
+{% endverbatim %}
+]]>	</content>
+    <tabTrigger>verbatim</tabTrigger>
+    <scope>text.html.django</scope>
+    <description>verbatim</description>
+</snippet>

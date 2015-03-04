@@ -54,6 +54,7 @@ Snippets for Django templates
  static          ``{% static %}``
  templatetag     ``{% templatetag %}``
  url             ``{% url %}``
+ verbatim        ``{% verbatim %} {% endverbatim %}``
  widthratio      ``{% widthratio %}``
  with            ``{% with as %} {% endwith %}``
  trans           ``{% trans %}``
