@@ -2,7 +2,7 @@
 <snippet>
     <content><![CDATA[
 class ${1:MODELNAME}(models.Model):
-    ${2:# TODO: Define fields here}
+    ${3:# TODO: Define fields here}
 
     class Meta:
         verbose_name = "$1"
@@ -17,7 +17,7 @@ class ${1:MODELNAME}(models.Model):
     def get_absolute_url(self):
         return reverse('${2:APP_NAME}:details', kwargs={'slug': self.slug})
 
-    ${3:# TODO: Define custom methods here}
+    ${4:# TODO: Define custom methods here}
 
     ]]></content>
     <tabTrigger>Model_full</tabTrigger>
