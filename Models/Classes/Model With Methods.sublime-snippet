@@ -14,9 +14,8 @@ class ${1:MODELNAME}(models.Model):
     def save(self):
         pass
 
-    @models.permalink
     def get_absolute_url(self):
-        return ('')
+        return reverse('${2:APP_NAME}:details', kwargs={'slug': self.slug})
 
     ${3:# TODO: Define custom methods here}
 
