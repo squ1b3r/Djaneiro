@@ -11,7 +11,7 @@ class ${1}Admin(admin.ModelAdmin):
     ]
     raw_id_fields = ('${5}',)
     readonly_fields = ('${6}',)
-    search_fields = ['${7}']
+    search_fields = ('${7}',)
 
 admin.site.register(${1}, ${1}Admin)
 ]]></content>
