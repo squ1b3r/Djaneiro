@@ -88,6 +88,7 @@ Snippets for Django model fields
  mdate          ``models.DateField()``
  mdatetime      ``models.DateTimeField()``
  mdecimal       ``models.DecimalField()``
+ mduration      ``models.DurationField()``
  memail         ``models.EmailField()``
  mfile          ``models.FileField()``
  mfilepath      ``models.FilePathField()``
