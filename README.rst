@@ -123,6 +123,7 @@ Snippets for Django form fields
  fdate          ``forms.DateField()``
  fdatetime      ``forms.DateTime()``
  fdecimal       ``forms.DecimalField()``
+ fduration      ``forms.DurationField()``
  femail         ``forms.EmailField()``
  ffile          ``forms.FileField()``
  ffilepath      ``forms.FilePathField()``
