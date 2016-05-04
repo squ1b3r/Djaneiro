@@ -88,6 +88,7 @@ Snippets for Django model fields
  mdate          ``models.DateField()``
  mdatetime      ``models.DateTimeField()``
  mdecimal       ``models.DecimalField()``
+ mduration      ``models.DurationField()``
  memail         ``models.EmailField()``
  mfile          ``models.FileField()``
  mfilepath      ``models.FilePathField()``
@@ -122,6 +123,7 @@ Snippets for Django form fields
  fdate          ``forms.DateField()``
  fdatetime      ``forms.DateTime()``
  fdecimal       ``forms.DecimalField()``
+ fduration      ``forms.DurationField()``
  femail         ``forms.EmailField()``
  ffile          ``forms.FileField()``
  ffilepath      ``forms.FilePathField()``
