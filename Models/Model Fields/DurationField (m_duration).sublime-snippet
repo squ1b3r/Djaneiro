@@ -3,5 +3,5 @@
     <content><![CDATA[${1:FIELDNAME} = models.DurationField($2)]]></content>
     <tabTrigger>mduration</tabTrigger>
     <scope>source.python</scope>
-    <description>DateField (mduration)</description>
+    <description>DurationField (mduration)</description>
 </snippet>
