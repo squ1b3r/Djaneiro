@@ -20,7 +20,7 @@
 	<array>
 		<dict>
 			<key>match</key>
-			<string>(meta|models)\.(Admin|AutoField|BigIntegerField|BooleanField|CharField|CommaSeparatedIntegerField|DateField|DateTimeField|DecimalField|EmailField|FileField|FilePathField|FloatField|ForeignKey|ImageField|IntegerField|IPAddressField|ManyToManyField|NullBooleanField|OneToOneField|PhoneNumberField|PositiveIntegerField|PositiveSmallIntegerField|SlugField|SmallIntegerField|TextField|TimeField|URLField|USStateField|XMLField)\b</string>
+			<string>(meta|models)\.(Admin|AutoField|BigIntegerField|BooleanField|CharField|CommaSeparatedIntegerField|DateField|DateTimeField|DecimalField|DurationField|EmailField|FileField|FilePathField|FloatField|ForeignKey|ImageField|IntegerField|IPAddressField|ManyToManyField|NullBooleanField|OneToOneField|PhoneNumberField|PositiveIntegerField|PositiveSmallIntegerField|SlugField|SmallIntegerField|TextField|TimeField|URLField|USStateField|XMLField)\b</string>
 			<key>name</key>
 			<string>support.type.django.model</string>
 		</dict>
