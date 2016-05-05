@@ -3,5 +3,5 @@
     <content><![CDATA[${1:FIELDNAME} = forms.DurationField($2)]]></content>
     <tabTrigger>fduration</tabTrigger>
     <scope>source.python</scope>
-    <description>DateField (fduration)</description>
+    <description>DurationField (fduration)</description>
 </snippet>
