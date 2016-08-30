@@ -1,6 +1,8 @@
 <!-- See http://www.sublimetext.com/docs/snippets for more information -->
 <snippet>
     <content><![CDATA[
+from django import forms
+    
 class ${1:MODELNAME}Form(forms.ModelForm):
     class Meta:
         model = $1
