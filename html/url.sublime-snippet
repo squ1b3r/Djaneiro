@@ -1,6 +1,6 @@
 <!-- See http://www.sublimetext.com/docs/snippets for more information -->
 <snippet>
-	<content><![CDATA[{% url $1 %}]]></content>
+	<content><![CDATA[{% url '$1' %}]]></content>
     <tabTrigger>url</tabTrigger>
     <scope>text.html.django</scope>
     <description>url</description>
