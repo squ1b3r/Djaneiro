@@ -91,6 +91,7 @@ Using [Package Control](https://packagecontrol.io/installation):
 | mtime        | ``models.TimeField()``                  |
 | murl         | ``models.URLField()``                   |
 | musstate     | ``models.USStateField()``               |
+| muuid        | ``models.UUIDField()``                  |
 | mxml         | ``models.XMLField()``                   |
 | fk           | ``models.ForeignKey()``                 |
 | m2m          | ``models.ManyToManyField()``            |
@@ -127,6 +128,7 @@ Using [Package Control](https://packagecontrol.io/installation):
 | ftchoice     | ``forms.TypedChoiceField()``         |
 | ftmuchoice   | ``forms.TypedMultipleChoiceField()`` |
 | furl         | ``forms.URLField()``                 |
+| fuuid        | ``forms.UUIDField()``                |
 
 ## Snippets for Django Views
 
