@@ -66,6 +66,7 @@ Using [Package Control](https://packagecontrol.io/installation):
 | Abbreviation | Tag                                     |
 |--------------|-----------------------------------------|
 | mauto        | ``models.AutoField()``                  |
+| mbauto       | ``models.BigAutoField()``               |
 | mbigint      | ``models.BigIntegerField()``            |
 | mbool        | ``models.BooleanField()``               |
 | mchar        | ``models.CharField()``                  |
@@ -78,6 +79,7 @@ Using [Package Control](https://packagecontrol.io/installation):
 | mfile        | ``models.FileField()``                  |
 | mfilepath    | ``models.FilePathField()``              |
 | mfloat       | ``models.FloatField()``                 |
+| mgip         | ``models.GenericIPAddressField()``      |
 | mimg         | ``models.ImageField()``                 |
 | mint         | ``models.IntegerField()``               |
 | mip          | ``models.IPAddressField()``             |
@@ -102,6 +104,7 @@ Using [Package Control](https://packagecontrol.io/installation):
 
 | Abbreviation | Code                                 |
 |--------------|--------------------------------------|
+| fbool        | ``forms.BooleanField()``             |
 | fchar        | ``forms.CharField()``                |
 | fchoice      | ``forms.ChoiceField()``              |
 | fcombo       | ``forms.ComboField()``               |
@@ -113,6 +116,7 @@ Using [Package Control](https://packagecontrol.io/installation):
 | ffile        | ``forms.FileField()``                |
 | ffilepath    | ``forms.FilePathField()``            |
 | ffloat       | ``forms.FloatField()``               |
+| fgip         | ``forms.GenericIPAddressField()``    |
 | fimg         | ``forms.ImageField()``               |
 | fint         | ``forms.IntegerField()``             |
 | fip          | ``forms.IPAddressField()``           |
