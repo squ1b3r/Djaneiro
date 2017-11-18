@@ -1,0 +1,7 @@
+<!-- See http://www.sublimetext.com/docs/snippets for more information -->
+<snippet>
+	<content><![CDATA[${1:FIELDNAME} = models.BigAutoField($2)]]></content>
+	<tabTrigger>mbauto</tabTrigger>
+    <scope>source.python</scope>
+    <description>BigAutoField (mbauto)</description>
+</snippet>
