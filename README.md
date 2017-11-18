@@ -66,6 +66,7 @@ Using [Package Control](https://packagecontrol.io/installation):
 | Abbreviation | Tag                                     |
 |--------------|-----------------------------------------|
 | mauto        | ``models.AutoField()``                  |
+| mbauto       | ``models.BigAutoField()``               |
 | mbigint      | ``models.BigIntegerField()``            |
 | mbool        | ``models.BooleanField()``               |
 | mchar        | ``models.CharField()``                  |
@@ -78,6 +79,7 @@ Using [Package Control](https://packagecontrol.io/installation):
 | mfile        | ``models.FileField()``                  |
 | mfilepath    | ``models.FilePathField()``              |
 | mfloat       | ``models.FloatField()``                 |
+| mgip         | ``models.GenericIPAddressField()``      |
 | mimg         | ``models.ImageField()``                 |
 | mint         | ``models.IntegerField()``               |
 | mip          | ``models.IPAddressField()``             |
