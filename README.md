@@ -104,7 +104,7 @@ Using [Package Control](https://packagecontrol.io/installation):
 
 | Abbreviation | Code                                 |
 |--------------|--------------------------------------|
-| fbool        | ``forms.BooleanField()``                |
+| fbool        | ``forms.BooleanField()``             |
 | fchar        | ``forms.CharField()``                |
 | fchoice      | ``forms.ChoiceField()``              |
 | fcombo       | ``forms.ComboField()``               |
@@ -116,6 +116,7 @@ Using [Package Control](https://packagecontrol.io/installation):
 | ffile        | ``forms.FileField()``                |
 | ffilepath    | ``forms.FilePathField()``            |
 | ffloat       | ``forms.FloatField()``               |
+| fgip         | ``forms.GenericIPAddressField()``    |
 | fimg         | ``forms.ImageField()``               |
 | fint         | ``forms.IntegerField()``             |
 | fip          | ``forms.IPAddressField()``           |
