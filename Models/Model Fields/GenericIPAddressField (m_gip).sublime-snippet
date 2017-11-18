@@ -1,0 +1,7 @@
+<!-- See http://www.sublimetext.com/docs/snippets for more information -->
+<snippet>
+    <content><![CDATA[${1:FIELDNAME} = models.GenericIPAddressField($2)]]></content>
+    <tabTrigger>mgip</tabTrigger>
+    <scope>source.python</scope>
+    <description>IPAddressField (mgip)</description>
+</snippet>
