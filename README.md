@@ -104,6 +104,7 @@ Using [Package Control](https://packagecontrol.io/installation):
 
 | Abbreviation | Code                                 |
 |--------------|--------------------------------------|
+| fbool        | ``forms.BooleanField()``                |
 | fchar        | ``forms.CharField()``                |
 | fchoice      | ``forms.ChoiceField()``              |
 | fcombo       | ``forms.ComboField()``               |
