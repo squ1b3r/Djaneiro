@@ -47,7 +47,7 @@ contexts:
       scope: variable.function.tag.django
       push: tagexpr
       with_prototype:
-        - match: "in\\b"
+        - match: "\\bin\\b"
           scope: keyword.control.flow.for.in.django
         - match: "with\\b"
           scope: variable.function.tag.django
