@@ -1,0 +1,120 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+name: XML (Django)
+file_extensions: [xml, xml.djt, dj.xml, djxml]
+scope: text.xml.django
+
+contexts:
+  main:
+    - match: ""
+      push: "Packages/XML/XML.sublime-syntax"
+      with_prototype:
+
+        - match: "{#(?=.*#})"
+          scope: punctuation.definition.comment.django
+          push:
+            - clear_scopes: true
+            - meta_scope: text.xml.django comment.line.django
+            - include: commentline
+
+        - match: "{%\\s*comment\\s*%}"
+          scope: punctuation.definition.comment.django
+          push:
+            - clear_scopes: true
+            - meta_scope: text.xml.django comment.block.django
+            - include: commentblock
+
+        - match: "{%\\s*(?=.*%})"
+          scope: punctuation.section.block.begin constant.character.escape.django
+          push:
+            - clear_scopes: true
+            - meta_scope: text.xml.django meta.function-call.django
+            - include: tagname
+
+        - match: "{{(?=.*}})"
+          scope: punctuation.section.block.begin constant.character.escape.django
+          push:
+            - clear_scopes: true
+            - meta_scope: text.xml.django meta.block
+            - include: expr
+
+  tagname:
+    - match: "%}"
+      scope: punctuation.section.block.end constant.character.escape.django
+      pop: true
+    - match: "\\w+\\b"
+      scope: variable.function.tag.django
+      push: tagexpr
+      with_prototype:
+        - match: "\\bin\\b"
+          scope: keyword.control.flow.for.in.django
+        - match: "with\\b"
+          scope: variable.function.tag.django
+          push: withclause
+        - match: "(?=%})"
+          pop: true
+
+  withclause:
+    - match: "\\w+\\b"
+      scope: variable.parameter.django
+      push: tagexpr
+      with_prototype:
+        - match: "(?=%})"
+          pop: true
+    - match: "(?=%})"
+      pop: true
+
+  tagexpr:
+    - match: "="
+      scope: keyword.operator.assignment.django
+    - match: "'"
+      scope: punctuation.definition.string.begin.django
+      push: singlestring
+    - match: '"'
+      scope: punctuation.definition.string.begin.django
+      push: doublestring
+    - match: "\\w+"
+      scope: meta.generic-name.django
+
+  singlestring:
+    - meta_scope: string.quoted.single.django
+    - match: \'
+      scope: punctuation.definition.string.end.django
+      pop: true
+
+  doublestring:
+    - meta_scope: string.quoted.double.django
+    - match: \"
+      scope: punctuation.definition.string.end.django
+      pop: true
+
+  expr:
+    - match: "'"
+      scope: punctuation.definition.string.begin.django
+      push: singlestring
+    - match: '"'
+      scope: punctuation.definition.string.begin.django
+      push: doublestring
+    - match: "\\|"
+      push: exprfilter
+    - match: "\\w+"
+      scope: meta.generic-name.django
+    - match: "}}"
+      scope: punctuation.section.block.end constant.character.escape.django
+      pop: true
+
+  exprfilter:
+    - meta_content_scope: variable.function.filter.django
+    - match: "[ :]"
+      pop: true
+
+  commentline:
+    - match: "#}"
+      scope: punctuation.definition.comment.django
+      pop: true
+
+  commentblock:
+    - match: "{%\\s*endcomment\\s*%}"
+      scope: punctuation.definition.comment.django
+      pop: true

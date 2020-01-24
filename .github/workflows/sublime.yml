@@ -1,0 +1,32 @@
+name: Sublime Syntax Test
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Install the Sublime syntax checker
+      run: |
+        sudo apt-get -y install libgl1-mesa-glx libglu1-mesa
+        curl https://download.sublimetext.com/st_syntax_tests_build_4052_x64.tar.bz2 | tar xjf -
+        sudo mv ./st_syntax_tests/syntax_tests /usr/local/bin/syntax_tests
+    
+    - name: Download Default Syntaxes
+      run: |
+        mkdir -p ~/.config/sublime-text/Packages
+        curl -L https://github.com/sublimehq/Packages/archive/master.tar.gz | tar xzf - --strip-components=1 -C ~/.config/sublime-text/Packages
+
+    - uses: actions/checkout@v1
+      with:
+        fetch-depth: 1
+
+    - name: Run Syntax Tests
+      run: |
+        ln -s $(pwd) ~/.config/sublime-text/Packages/Djaneiro
+        syntax_tests
+
+    - name: Run build_syntaxes.py check
+      run: python3 build_syntaxes.py check
