@@ -18,7 +18,7 @@ file_extensions:
 first_line_match: (?i){%\s?(?>load|extends)\s
 
 variables:
-  template_tags: "(
+  template_tags: "(\
         autoescape|endautoescape|\
         block|endblock|\
         csrf_token|\
@@ -28,7 +28,7 @@ variables:
         filter|endfilter|\
         firstof|\
         for|empty|endfor|\
-        if|elif|else|endif|ifchanged|endifchanged|\
+        ifchanged|endifchanged|if|elif|else|endif|\
         include|\
         load|from|\
         lorem|\
@@ -44,9 +44,10 @@ variables:
         thumbnail|endthumbnail|\
         static|get_static_prefix|get_media_prefix)"
 
-  template_filters: "(
+  template_filters: "(\
           add|\
           addslashes|\
+          apnumber|\
           capfirst|\
           center|\
           cut|\
@@ -63,6 +64,8 @@ variables:
           floatformat|\
           force_escape|\
           get_digit|\
+          intcomma|\
+          intword|\
           iriencode|\
           join|\
           json_script|\
@@ -75,6 +78,9 @@ variables:
           ljust|\
           lower|\
           make_list|\
+          naturalday|\
+          naturaltime|\
+          ordinal|\
           phone2numeric|\
           pluralize|\
           pprint|\
@@ -113,28 +119,22 @@ contexts:
           scope: punctuation.definition.comment.django
           push:
             - clear_scopes: true
-            - meta_scope: text.django comment.line.django
+            - meta_scope: text.html.django comment.line.django
             - include: commentline
 
         - match: "{%\\s*comment\\s*(\"[^\"]*\"\\s*)?%}"
           scope: punctuation.definition.comment.django
           push:
             - clear_scopes: true
-            - meta_scope: text.django comment.block.django
+            - meta_scope: text.html.django comment.block.django
             - include: commentblock
-
 
         - match: "{%\\s*(?=.*%})"
           scope: punctuation.section.block.begin constant.character.escape.django
           push:
             - clear_scopes: true
-            - meta_scope: text.django meta.function-call.django
+            - meta_scope: text.html.django entity.tag.tagbraces.django
             - include: tagname
-
-
-
-          # push:
-          #   - meta_scope: keyword.function.django
 
         - match: "{{(?=.*}})"
           scope: punctuation.section.block.begin constant.character.escape.django
@@ -144,61 +144,43 @@ contexts:
             - include: expr
 
   tagname:
-
-
-    - match: "%}"
-      scope: punctuation.section.block.end constant.character.escape.django
-      pop: true
-
-    - match: "{{template_tags}}"
+    - match: "{{template_tags}}\\b"
       scope: keyword.function.django
-
-    - include: tagexpr
-
+      push: tagexpr
+    # Match custom filters
     - match: "\\w+\\b"
       scope: variable.function.tag.django
       push: tagexpr
-      with_prototype:
-        - match: "\\bin\\b"
-          scope: keyword.control.flow.for.in.django
-        - match: "with\\b"
-          scope: variable.function.tag.django
-          push: withclause
-        - match: "(?=%})"
-          pop: true
 
-  withclause:
-    - match: "\\w+\\b"
-      scope: variable.parameter.django
-      push: tagexpr
-      with_prototype:
-        - match: "(?=%})"
-          pop: true
-    - match: "(?=%})"
-      pop: true
 
   tagexpr:
-    - match: "="
+    - match: "%}"
+      scope: punctuation.section.block.end constant.character.escape.django
+      pop: 2
+    - match: "(by|from|as)\\b"
+      scope: keyword.function.django
+    - match: "(==|>=|<=|<|>|!=)"
       scope: keyword.operator.assignment.django
     - match: "'"
-      scope: punctuation.definition.string.begin.django
+      scope: string.quote.tag-string.django
       push: singlestring
     - match: '"'
-      scope: punctuation.definition.string.begin.django
+      scope: string.quote.tag-string.django
       push: doublestring
     - match: "\\w+"
-      scope: meta.generic-name.django
+      scope: string.unquoted.tag-string.django
+
 
   singlestring:
     - meta_scope: string.quoted.single.django
     - match: \'
-      scope: punctuation.definition.string.end.django
+      scope: string.quote.tag-string.django
       pop: true
 
   doublestring:
     - meta_scope: string.quoted.double.django
     - match: \"
-      scope: punctuation.definition.string.end.django
+      scope: string.quote.tag-string.django
       pop: true
 
   expr:
@@ -222,12 +204,10 @@ contexts:
     # typically a space, a colon (e.g. {{var|filter:arg}}), or the closing }}.
     # We use a look-ahead so that we don't swallow the curly bracket, as if we do then the `expr`
     # context won't be able to match "}}".
-    - match: "{{template_filters}}"
+    - match: "{{template_filters}}\\b"
       scope: entity.name.tag
-
     - match: "(?=[^\\w])"
       pop: true
-
 
   commentline:
     - match: "#}"
