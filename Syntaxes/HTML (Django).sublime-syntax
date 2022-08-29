@@ -130,14 +130,14 @@ contexts:
             - include: commentblock
 
         - match: "{%\\s*(?=.*%})"
-          scope: punctuation.section.block.begin constant.character.escape.django
+          scope: meta.braces punctuation.section.block.begin
           push:
             - clear_scopes: true
             - meta_scope: text.html.django entity.tag.tagbraces.django
             - include: tagname
 
         - match: "{{(?=.*}})"
-          scope: punctuation.section.block.begin constant.character.escape.django
+          scope: meta.braces punctuation.section.block.begin
           push:
             - clear_scopes: true
             - meta_scope: variable.language.django
@@ -152,24 +152,24 @@ contexts:
       scope: variable.function.tag.django
       push: tagexpr
 
-
   tagexpr:
     - match: "%}"
-      scope: punctuation.section.block.end constant.character.escape.django
+      scope: meta.braces punctuation.section.block.end
       pop: 2
     - match: "(by|from|as)\\b"
       scope: keyword.function.django
     - match: "(==|>=|<=|<|>|!=)"
-      scope: keyword.operator.assignment.django
+      scope: keyword.operator.logical.django
     - match: "'"
       scope: string.quote.tag-string.django
       push: singlestring
     - match: '"'
       scope: string.quote.tag-string.django
       push: doublestring
+    - match: "\\d+\\.?\\d+"
+      scope: constant.numeric
     - match: "\\w+"
       scope: string.unquoted.tag-string.django
-
 
   singlestring:
     - meta_scope: string.quoted.single.django
@@ -218,4 +218,3 @@ contexts:
     - match: "{%\\s*endcomment\\s*%}"
       scope: punctuation.definition.comment.django
       pop: true
-
