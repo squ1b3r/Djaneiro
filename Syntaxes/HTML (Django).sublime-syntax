@@ -2,7 +2,7 @@
 ---
 # https://www.sublimetext.com/docs/syntax.html
 # https://html.spec.whatwg.org/multipage/syntax.html
-name: HTML (Django) Update
+name: HTML (Django)
 scope: text.html.django
 version: 2
 
