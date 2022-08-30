@@ -1,4 +1,4 @@
-# Django support for Sublime Text 3 & 4
+# Django support for Sublime Text 4
 
 [![Join the chat at https://gitter.im/squ1b3r/Djaneiro](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/squ1b3r/Djaneiro?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
