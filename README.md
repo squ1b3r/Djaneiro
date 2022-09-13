@@ -1,4 +1,4 @@
-# Django support for Sublime Text 2/3
+# Django support for Sublime Text
 
 [![Join the chat at https://gitter.im/squ1b3r/Djaneiro](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/squ1b3r/Djaneiro?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
@@ -9,6 +9,8 @@ Using [Package Control](https://packagecontrol.io/installation):
 - Open the Command Pallete (`ctrl+shift+P` or `cmd+shift+P`).
 - Type “Install Package” and hit return.
 - Type “Djaneiro” and hit return.
+
+Use `HTML (Django) ST3` if using Sublime 3 or earlier.
 
 ## Snippets for Django templates
 
