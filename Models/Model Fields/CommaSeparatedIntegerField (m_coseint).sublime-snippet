@@ -1,7 +1,0 @@
-<!-- See http://www.sublimetext.com/docs/snippets for more information -->
-<snippet>
-    <content><![CDATA[${1:FIELDNAME} = models.CommaSeparatedIntegerField($2)]]></content>
-    <tabTrigger>mcoseint</tabTrigger>
-    <scope>source.python</scope>
-    <description>CommaSeparatedIntegerField (mcoseint)</description>
-</snippet>
