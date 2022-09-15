@@ -1,0 +1,6 @@
+[
+    {
+        "caption": "Djan: Toggle Commend",
+        "command": "toggle_comment_django"
+    }
+]
