@@ -54,7 +54,7 @@ def build_comment_data(view, pt):
 
     return (line_comments, block_comments)
 
-class ToggleCommentCommand(sublime_plugin.TextCommand):
+class ToggleCommentDjangoCommand(sublime_plugin.TextCommand):
 
     def remove_block_comment(self, view, edit, comment_data, region):
         (line_comments, block_comments) = comment_data
@@ -114,10 +114,14 @@ class ToggleCommentCommand(sublime_plugin.TextCommand):
         if len(line_comments) == 0 and len(block_comments) == 0:
             return
 
+        comment_block_style = block_comments[0]
+        if len(block_comments) >= 2:
+            comment_block_style = block_comments[2]
+
         lines = view.lines(region)
 
 
-        comment_style = prefer_block and block_comments[2] or block_comments[0]
+        comment_style = prefer_block and comment_block_style or block_comments[0]
 
 
         if len(lines) <= 1 and not has_non_white_space_on_line(view, region.begin()):
@@ -141,7 +145,7 @@ class ToggleCommentCommand(sublime_plugin.TextCommand):
             startpos = view.rowcol(region.begin())
             endpos = view.rowcol(region.end())
 
-            comment_style = list(block_comments[2])
+            comment_style = list(comment_block_style)
             if startpos[1] == 0:
                 comment_style[0] += "\n"
             if endpos[1] == 0:

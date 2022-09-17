@@ -14,5 +14,5 @@
         "context": [
             { "key": "selector", "operator": "equal", "operand": "text.html.django" },
         ]
-    },
+    }
 ]

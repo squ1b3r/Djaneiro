@@ -1,6 +1,6 @@
 [
     {
-        "keys": ["ctrl+/"],
+        "keys": ["super+forward_slash"],
         "command": "toggle_comment_django",
         "args": { "block": false },
         "context": [
@@ -8,11 +8,11 @@
         ]
     },
     {
-        "keys": ["ctrl+shift+/"],
+        "keys": ["super+alt+forward_slash"],
         "command": "toggle_comment_django",
         "args": { "block": true},
         "context": [
             { "key": "selector", "operator": "equal", "operand": "text.html.django" },
         ]
-    },
+    }
 ]
