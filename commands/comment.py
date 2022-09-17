@@ -1,7 +1,9 @@
 import sublime, sublime_plugin
 
+
 def shift_region(region, shift):
     return sublime.Region(region.a + shift, region.b + shift)
+
 
 def advance_to_first_non_white_space_on_line(view, pt):
     while True:
@@ -13,6 +15,7 @@ def advance_to_first_non_white_space_on_line(view, pt):
 
     return pt
 
+
 def has_non_white_space_on_line(view, pt):
     while True:
         c = view.substr(sublime.Region(pt, pt + 1))
@@ -20,6 +23,7 @@ def has_non_white_space_on_line(view, pt):
             pt += 1
         else:
             return c != "\n"
+
 
 def build_comment_data(view, pt):
     shell_vars = view.meta_info("shellVariables", pt)
@@ -29,8 +33,8 @@ def build_comment_data(view, pt):
     # transform the list of dicts into a single dict
     all_vars = {}
     for v in shell_vars:
-        if 'name' in v and 'value' in v:
-            all_vars[v['name']] = v['value']
+        if "name" in v and "value" in v:
+            all_vars[v["name"]] = v["value"]
 
     line_comments = []
     block_comments = []
@@ -44,18 +48,18 @@ def build_comment_data(view, pt):
         disable_indent = all_vars.setdefault("TM_COMMENT_DISABLE_INDENT" + suffix)
 
         if start and end:
-            start = start.replace('\\n', '\n')
-            end = end.replace('\\n', '\n')
-            block_comments.append((start, end, disable_indent == 'yes'))
-            block_comments.append((start.strip(), end.strip(), disable_indent == 'yes'))
+            start = start.replace("\\n", "\n")
+            end = end.replace("\\n", "\n")
+            block_comments.append((start, end, disable_indent == "yes"))
+            block_comments.append((start.strip(), end.strip(), disable_indent == "yes"))
         elif start:
-            line_comments.append((start, disable_indent == 'yes'))
-            line_comments.append((start.strip(), disable_indent == 'yes'))
+            line_comments.append((start, disable_indent == "yes"))
+            line_comments.append((start.strip(), disable_indent == "yes"))
 
     return (line_comments, block_comments)
 
-class ToggleCommentDjangoCommand(sublime_plugin.TextCommand):
 
+class ToggleCommentDjangoCommand(sublime_plugin.TextCommand):
     def remove_block_comment(self, view, edit, comment_data, region):
         (line_comments, block_comments) = comment_data
 
@@ -66,30 +70,38 @@ class ToggleCommentDjangoCommand(sublime_plugin.TextCommand):
 
         for c in block_comments:
             (start, end, disable_indent) = c
-            start_region = sublime.Region(whole_region.begin(),
-                whole_region.begin() + len(start))
-            end_region = sublime.Region(whole_region.end() - len(end),
-                whole_region.end())
+            start_region = sublime.Region(
+                whole_region.begin(), whole_region.begin() + len(start)
+            )
+            end_region = sublime.Region(
+                whole_region.end() - len(end), whole_region.end()
+            )
 
             if view.substr(start_region) == start and view.substr(end_region) == end:
 
                 # erase whole line of block comment if it's the only thing on the line
-                if start_region.begin() == view.line(start_region).begin() and start_region.end() == view.line(start_region).end():
+                if (
+                    start_region.begin() == view.line(start_region).begin()
+                    and start_region.end() == view.line(start_region).end()
+                ):
                     start_region.a -= 1
-                if end_region.begin() == view.line(end_region).begin() and end_region.end() == view.line(end_region).end():
+                if (
+                    end_region.begin() == view.line(end_region).begin()
+                    and end_region.end() == view.line(end_region).end()
+                ):
                     end_region.a -= 1
                 # It's faster to erase the start region first
                 view.erase(edit, start_region)
 
                 end_region = sublime.Region(
                     end_region.begin() - start_region.size(),
-                    end_region.end() - start_region.size())
+                    end_region.end() - start_region.size(),
+                )
 
                 view.erase(edit, end_region)
                 return True
 
         return False
-
 
     def block_comment_region(self, view, edit, block_comment_data, region):
         (start, end, disable_indent) = block_comment_data
@@ -97,9 +109,9 @@ class ToggleCommentDjangoCommand(sublime_plugin.TextCommand):
         if region.empty():
             # Silly buggers to ensure the cursor doesn't end up after the end
             # comment token
-            view.replace(edit, sublime.Region(region.end()), 'x')
+            view.replace(edit, sublime.Region(region.end()), "x")
             view.insert(edit, region.end() + 1, end)
-            view.replace(edit, sublime.Region(region.end(), region.end() + 1), '')
+            view.replace(edit, sublime.Region(region.end(), region.end() + 1), "")
             view.insert(edit, region.begin(), start)
         else:
             view.insert(edit, region.end(), end)
@@ -120,9 +132,7 @@ class ToggleCommentDjangoCommand(sublime_plugin.TextCommand):
 
         lines = view.lines(region)
 
-
         comment_style = prefer_block and comment_block_style or block_comments[0]
-
 
         if len(lines) <= 1 and not has_non_white_space_on_line(view, region.begin()):
             # If nothing on line
@@ -151,14 +161,15 @@ class ToggleCommentDjangoCommand(sublime_plugin.TextCommand):
             if endpos[1] == 0:
                 comment_style[1] += "\n"
 
-
             self.block_comment_region(view, edit, comment_style, region)
 
     def run(self, edit, block=False):
         for region in self.view.sel():
             comment_data = build_comment_data(self.view, region.begin())
-            if (region.end() != self.view.size() and
-                    build_comment_data(self.view, region.end()) != comment_data):
+            if (
+                region.end() != self.view.size()
+                and build_comment_data(self.view, region.end()) != comment_data
+            ):
                 # region spans languages, nothing we can do
                 continue
 
@@ -170,8 +181,8 @@ class ToggleCommentDjangoCommand(sublime_plugin.TextCommand):
                 # Use block comments to comment out the line
                 line = self.view.line(region.a)
                 line = sublime.Region(
-                    advance_to_first_non_white_space_on_line(self.view, line.a),
-                    line.b)
+                    advance_to_first_non_white_space_on_line(self.view, line.a), line.b
+                )
 
                 # Try and remove any existing block comment now
                 if self.remove_block_comment(self.view, edit, comment_data, line):
