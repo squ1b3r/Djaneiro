@@ -115,16 +115,14 @@ class DjangoUrlsPlugin(sublime_plugin.EventListener):
         if not index:
             return
 
-        print(index, prefix)
         prefix = prefix.lower()
-        print(index.autocomplete)
+
         out = []
         for view_name, payload in index.autocomplete.items():
             if view_name.lower().startswith(prefix):
                 params = ''
                 if payload[3]:
                     params = " " + " ".join([f'${{{i}:{p}}}' for i, p in enumerate(payload[3], 1)])
-                print(params)
                 out.append((
                 f'{view_name}\t{payload[0]}', f"'{view_name}'" + params
             ))
