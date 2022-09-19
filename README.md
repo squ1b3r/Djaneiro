@@ -85,7 +85,7 @@ Use `HTML (Django) ST3` if using Sublime 3 or earlier.
 | mgip         | ``models.GenericIPAddressField()``      |
 | mimg         | ``models.ImageField()``                 |
 | mint         | ``models.IntegerField()``               |
-| mjson        | ``models.JSONField()``.                 |
+| mjson        | ``models.JSONField()``                  |
 | mnullbool    | ``models.BooleanField(null=True)``      |
 | mphone       | ``models.PhoneNumberField()``           |
 | mposint      | ``models.PositiveIntegerField()``       |
