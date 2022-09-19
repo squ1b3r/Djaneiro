@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[
+<a href="{% url '${1:django_link}' %}">${2:text}</a>
+]]></content>
+    <tabTrigger>aurl</tabTrigger>
+    <scope>text.html.django</scope>
+</snippet>
