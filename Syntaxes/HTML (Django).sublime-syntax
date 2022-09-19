@@ -128,7 +128,7 @@ contexts:
             - meta_scope: text.html.django comment.block.django
             - include: commentblock
 
-        - match: ({%)(\s*url\s)(.*)\s?(.*?)(%})
+        - match: ({%)(\s*url)(\s*\S*\s?)(.*?)(%})
           scope: entity.tag.url.django
           captures:
             1: meta.braces punctuation.section.block.begin
