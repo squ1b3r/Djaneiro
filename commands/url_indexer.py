@@ -10,10 +10,10 @@ from .utils.common import Logger
 
 logger = Logger(__name__)
 
-IndexEntry = namedtuple('IndexEntry', ['full_method', 'url', 'method_name', 'kwargs'])
+IndexEntry = namedtuple("IndexEntry", ["full_method", "url", "method_name", "kwargs"])
+
 
 class URLIndex(dict):
-
     @classmethod
     def init_with_index(cls, index):
         self = cls()
@@ -32,7 +32,6 @@ class DjangoUrlsIndexer(sublime_plugin.WindowCommand):
         self.window_index = {}
         self.python_interpreter = None
 
-
     def clear_index(self):
         self.index = {}
 
@@ -44,7 +43,7 @@ class DjangoUrlsIndexer(sublime_plugin.WindowCommand):
             return
         self._is_running = True
 
-        logger.debug('Indexing project data...')
+        logger.debug("Indexing project data...")
         managepy = None
         for folder in project_folders:
             path_str = folder.get("path")
@@ -57,12 +56,12 @@ class DjangoUrlsIndexer(sublime_plugin.WindowCommand):
                 continue
 
         if not managepy:
-            logger.info('No manage.py found in project.  URL Index stopped.')
+            logger.info("No manage.py found in project.  URL Index stopped.")
             return
 
         managepy = next(managepy)
 
-        this_path = Path(__file__).parent.absolute() / 'utils'
+        this_path = Path(__file__).parent.absolute() / "utils"
         cmd = f'import sys; sys.path.append("{this_path}"); from url_extract import run; run()'
         result = subprocess.run(
             [self.python_interpreter, managepy, "shell", "-c", cmd],
@@ -73,12 +72,12 @@ class DjangoUrlsIndexer(sublime_plugin.WindowCommand):
             logger.error(result.stderr)
 
         if not result.stdout:
-            logger.warning('No output from url_extract script.')
+            logger.warning("No output from url_extract script.")
             return
 
         self.set_window_index(window, json.loads(result.stdout))
 
-        logger.debug('Indexing complete.')
+        logger.debug("Indexing complete.")
 
         self._is_running = False
 
@@ -90,9 +89,9 @@ djurls_indexer = DjangoUrlsIndexer(sublime.active_window())
 
 
 class DjangoUrlsPlugin(sublime_plugin.EventListener):
-    def on_activated(self, view):
-        # for testing
-        self.on_load_project_async(view.window())
+    # def on_activated(self, view):
+    #     # for testing
+    #     self.on_load_project_async(view.window())
 
     def on_load_project_async(self, window):
         project_data = window.project_data()
@@ -131,8 +130,6 @@ class DjangoUrlsPlugin(sublime_plugin.EventListener):
         if not format_method:
             return []
 
-
-
         index = djurls_indexer.get_index_for_window(view.window())
         if not index:
             return []
@@ -158,7 +155,10 @@ class DjangoUrlsPlugin(sublime_plugin.EventListener):
             )
             params = ", kwargs={" + params + "}"
 
-        return f"{index_entry.method_name}\t{index_entry.full_method}", f"'{index_entry.method_name}'" + params
+        return (
+            f"{index_entry.method_name}\t{index_entry.full_method}",
+            f"'{index_entry.method_name}'{params}",
+        )
 
     def completions_for_url_tag(self, index_entry):
         params = ""
@@ -166,8 +166,10 @@ class DjangoUrlsPlugin(sublime_plugin.EventListener):
             params = " " + " ".join(
                 [f"${{{i}:{p}}}" for i, p in enumerate(index_entry.kwargs, 1)]
             )
-        return f"{index_entry.method_name}\t{index_entry.full_method}", f"'{index_entry.method_name}'" + params
-
+        return (
+            f"{index_entry.method_name}\t{index_entry.full_method}",
+            f"'{index_entry.method_name}'{params}",
+        )
 
     def on_post_save(self, view):
         if not view.match_selector(0, "source.python"):

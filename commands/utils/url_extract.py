@@ -1,6 +1,7 @@
 from django.urls import get_resolver, URLPattern, URLResolver  # type: ignore
 
 import json
+import sys
 
 def describe_pattern(p):
     return str(p.pattern)
@@ -54,4 +55,4 @@ def extract_views_from_urlpatterns(urlpatterns, base='', namespace=None):
 def run():
     views = extract_views_from_urlpatterns(get_resolver().url_patterns)
     output = [(f'{view[0].__module__}.{view[0].__name__}', view[1], view[2], list(view[3])) for view in views]
-    print(json.dumps(output))
+    sys.stdout.write(json.dumps(output))
