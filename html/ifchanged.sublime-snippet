@@ -6,6 +6,6 @@
 {% endifchanged %}
 ]]>	</content>
     <tabTrigger>ifchanged</tabTrigger>
-    <scope>text.html.django</scope>
+    <scope>text.html.django -entity</scope>
     <description>ifchanged</description>
 </snippet>

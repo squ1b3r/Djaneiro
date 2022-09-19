@@ -2,6 +2,6 @@
 <snippet>
 	<content><![CDATA[{% widthratio ${1:this_value} ${2:max_value} ${3:100} %}]]></content>
     <tabTrigger>widthratio</tabTrigger>
-    <scope>text.html.django</scope>
+    <scope>text.html.django -entity</scope>
     <description>widthratio</description>
 </snippet>

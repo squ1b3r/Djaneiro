@@ -6,6 +6,6 @@
 {% endspaceless %}
 ]]>	</content>
     <tabTrigger>spaceless</tabTrigger>
-    <scope>text.html.django</scope>
+    <scope>text.html.django -entity</scope>
     <description>spaceless</description>
 </snippet>

@@ -1,2 +1,2 @@
-from .comment import ToggleCommentCommand
 from .comment import ToggleCommentDjangoCommand
+from .url_indexer import DjangoUrlsIndexer, DjangoUrlsPlugin

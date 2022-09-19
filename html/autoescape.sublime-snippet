@@ -6,6 +6,6 @@
 {% endautoescape %}
 ]]> </content>
 	<tabTrigger>autoescape</tabTrigger>
-    <scope>text.html.django</scope>
+    <scope>text.html.django -entity</scope>
     <description>autoescape</description>
 </snippet>

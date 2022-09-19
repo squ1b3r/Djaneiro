@@ -2,6 +2,6 @@
 <snippet>
 	<content><![CDATA[{% regroup $1 by $2 as $3 %}]]></content>
     <tabTrigger>regroup</tabTrigger>
-    <scope>text.html.django</scope>
+    <scope>text.html.django -entity</scope>
     <description>regroup</description>
 </snippet>

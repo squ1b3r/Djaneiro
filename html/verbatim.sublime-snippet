@@ -6,6 +6,6 @@
 {% endverbatim %}
 ]]>	</content>
     <tabTrigger>verbatim</tabTrigger>
-    <scope>text.html.django</scope>
+    <scope>text.html.django -entity</scope>
     <description>verbatim</description>
 </snippet>

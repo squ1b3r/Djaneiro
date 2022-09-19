@@ -6,6 +6,6 @@
 {% endifnotequal %}
 ]]>	</content>
     <tabTrigger>ifnotequal</tabTrigger>
-    <scope>text.html.django</scope>
+    <scope>text.html.django -entity</scope>
     <description>ifnotequal</description>
 </snippet>

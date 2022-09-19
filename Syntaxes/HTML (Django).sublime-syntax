@@ -128,6 +128,15 @@ contexts:
             - meta_scope: text.html.django comment.block.django
             - include: commentblock
 
+        - match: ({%)(\s*url\s)(.*)\s?(.*?)(%})
+          scope: entity.tag.url.django
+          captures:
+            1: meta.braces punctuation.section.block.begin
+            2: keyword.url-tag.django
+            3: text.url-name.django
+            4: text.url-parameters.django
+            5: meta.braces punctuation.section.block.end
+
         - match: "{%\\s*(?=.*%})"
           scope: meta.braces punctuation.section.block.begin
           push:
