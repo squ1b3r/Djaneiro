@@ -1,0 +1,18 @@
+[
+    {
+        "keys": ["ctrl+/"],
+        "command": "toggle_comment_django",
+        "args": { "block": false },
+        "context": [
+            { "key": "selector", "operator": "equal", "operand": "text.html.django" },
+        ]
+    },
+    {
+        "keys": ["ctrl+shift+/"],
+        "command": "toggle_comment_django",
+        "args": { "block": true},
+        "context": [
+            { "key": "selector", "operator": "equal", "operand": "text.html.django" },
+        ]
+    }
+]

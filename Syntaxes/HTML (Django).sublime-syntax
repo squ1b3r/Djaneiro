@@ -115,12 +115,11 @@ contexts:
       push: "Packages/HTML/HTML.sublime-syntax"
       with_prototype:
 
-        - match: "{#(?=.*#})"
-          scope: punctuation.definition.comment.django
-          push:
-            - clear_scopes: true
-            - meta_scope: text.html.django comment.line.django
-            - include: commentline
+        - match: ({#)(.*)(#})
+          scope: comment.line.django
+          captures:
+            1: punctuation.definition.comment.django
+            3: punctuation.definition.comment.django
 
         - match: "{%\\s*comment\\s*(\"[^\"]*\"\\s*)?%}"
           scope: punctuation.definition.comment.django
@@ -195,7 +194,7 @@ contexts:
     - match: "(\\w+)"
       scope: entity.name.variable
     - match: "}}"
-      scope: punctuation.section.block.end constant.character.escape.django
+      scope: punctuation.section.block.end
       pop: true
 
   exprfilter:
@@ -209,10 +208,7 @@ contexts:
     - match: "(?=[^\\w])"
       pop: true
 
-  commentline:
-    - match: "#}"
-      scope: punctuation.definition.comment.django
-      pop: true
+
 
   commentblock:
     - match: "{%\\s*endcomment\\s*%}"
