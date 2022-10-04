@@ -63,6 +63,7 @@ the method `reverse(`. The appropriate keyword arguments will be displayed if av
 | static         | ``{% static %}``                                 |
 | templatetag    | ``{% templatetag %}``                            |
 | url            | ``{% url %}``                                    |
+| aurl           | ``<a href="{% url '' %}></a>``                   |
 | verbatim       | ``{% verbatim %} {% endverbatim %}``             |
 | widthratio     | ``{% widthratio %}``                             |
 | with           | ``{% with as %} {% endwith %}``                  |
@@ -88,9 +89,9 @@ the method `reverse(`. The appropriate keyword arguments will be displayed if av
 | mauto        | ``models.AutoField()``                  |
 | mbauto       | ``models.BigAutoField()``               |
 | mbigint      | ``models.BigIntegerField()``            |
+| mbin         | ``models.BinaryField()``                |
 | mbool        | ``models.BooleanField()``               |
 | mchar        | ``models.CharField()``                  |
-| mcoseint     | ``models.CommaSeparatedIntegerField()`` |
 | mdate        | ``models.DateField()``                  |
 | mdatetime    | ``models.DateTimeField()``              |
 | mdecimal     | ``models.DecimalField()``               |
@@ -102,19 +103,20 @@ the method `reverse(`. The appropriate keyword arguments will be displayed if av
 | mgip         | ``models.GenericIPAddressField()``      |
 | mimg         | ``models.ImageField()``                 |
 | mint         | ``models.IntegerField()``               |
-| mip          | ``models.IPAddressField()``             |
-| mnullbool    | ``models.NullBooleanField()``           |
+| mjson        | ``models.JSONField()``                  |
+| mnullbool    | ``models.BooleanField(null=True)``      |
 | mphone       | ``models.PhoneNumberField()``           |
 | mposint      | ``models.PositiveIntegerField()``       |
+| mposbigint   | ``models.PositiveBigIntegerField()``    |
 | mpossmallint | ``models.PositiveSmallIntegerField()``  |
+| msauto       | ``models.SmallAutoField()``             |
 | mslug        | ``models.SlugField()``                  |
-| msmallint    | ``models.SmallIntegerFiled()``          |
+| msmallint    | ``models.SmallIntegerField()``          |
 | mtext        | ``models.TextField()``                  |
 | mtime        | ``models.TimeField()``                  |
 | murl         | ``models.URLField()``                   |
 | musstate     | ``models.USStateField()``               |
 | muuid        | ``models.UUIDField()``                  |
-| mxml         | ``models.XMLField()``                   |
 | fk           | ``models.ForeignKey()``                 |
 | m2m          | ``models.ManyToManyField()``            |
 | o2o          | ``models.OneToOneField()``              |
