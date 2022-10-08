@@ -115,7 +115,6 @@ class DjangoUrlsPlugin(sublime_plugin.EventListener):
 
     def on_query_completions(self, view, prefix, locations):
         format_method = None
-
         if view.match_selector(locations[0], "meta.function_call.python"):
             LENGTH_OF_REVERSE = len(prefix) + 8
             region = sublime.Region(
@@ -138,7 +137,7 @@ class DjangoUrlsPlugin(sublime_plugin.EventListener):
 
         out = []
         for view_name, index_entry in index.items():
-            if view_name.startswith(prefix):
+            if prefix in view_name:
                 out.append(format_method(index_entry))
 
         return (
