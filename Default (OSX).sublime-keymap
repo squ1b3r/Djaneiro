@@ -4,7 +4,7 @@
         "command": "toggle_comment_django",
         "args": { "block": false },
         "context": [
-            { "key": "selector", "operator": "equal", "operand": "text.html.django" },
+            { "key": "selector", "operator": "equal", "operand": "text.html.django & -source.js" },
         ]
     },
     {
@@ -12,7 +12,7 @@
         "command": "toggle_comment_django",
         "args": { "block": true},
         "context": [
-            { "key": "selector", "operator": "equal", "operand": "text.html.django" },
+            { "key": "selector", "operator": "equal", "operand": "text.html.django & -source.js" },
         ]
     }
 ]
