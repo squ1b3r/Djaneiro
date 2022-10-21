@@ -89,9 +89,6 @@ djurls_indexer = DjangoUrlsIndexer(sublime.active_window())
 
 
 class DjangoUrlsPlugin(sublime_plugin.EventListener):
-    # def on_activated(self, view):
-    #     # for testing
-    #     self.on_load_project_async(view.window())
 
     def on_load_project_async(self, window):
         project_data = window.project_data()
