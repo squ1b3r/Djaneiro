@@ -12,6 +12,24 @@ Using [Package Control](https://packagecontrol.io/installation):
 
 Use `HTML (Django) ST3` if using Sublime 3 or earlier.
 
+## URL autocompletion
+
+Djaneiro features URL autocompletion functionality. By keeping an up-to-date index of
+all named URLs and using tab-completion to quickly lookup available names of views, it
+eliminates all time spent tracking down URL names in `urls.py`.
+
+To use this feature:
+* The django project must be saved as a sublime-project.
+* `./manage.py` needs to be located in one of the folders in the project.
+* The setting `python_interpreter` must be set in your project settings.
+
+The index is loaded when the project is opened, and refreshed anytime a python file containing
+the word `urlpatterns` is saved.
+
+The autocomplete can be triggered within any `{% url %}` template tag, or inside
+the method `reverse(`. The appropriate keyword arguments will be displayed if available.
+
+
 ## Snippets for Django templates
 
 | Abbreviation   | Tag                                              |

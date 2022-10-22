@@ -6,6 +6,6 @@
 {% endwith %}
 ]]>	</content>
     <tabTrigger>with</tabTrigger>
-    <scope>text.html.django</scope>
+    <scope>text.html.django -entity</scope>
     <description>with</description>
 </snippet>

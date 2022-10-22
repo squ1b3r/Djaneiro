@@ -6,6 +6,6 @@
 {% endfilter %}
 ]]> </content>
     <tabTrigger>filter</tabTrigger>
-    <scope>text.html.django</scope>
+    <scope>text.html.django -entity</scope>
     <description>filter</description>
 </snippet>

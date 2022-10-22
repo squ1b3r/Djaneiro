@@ -2,6 +2,6 @@
 <snippet>
     <content><![CDATA[{% block ${1:blockname} %}${2:$SELECTION}{% endblock ${1:blockname} %}]]></content>
     <tabTrigger>iblock</tabTrigger>
-    <scope>text.html.django</scope>
+    <scope>text.html.django -entity</scope>
     <description>inline block</description>
 </snippet>

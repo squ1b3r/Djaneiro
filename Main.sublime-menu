@@ -16,33 +16,11 @@
                         "children":
                         [
                             {
-                                "command": "open_file", "args":
+                                "command": "edit_settings", "args":
                                 {
-                                    "file": "${packages}/Djaneiro/Settings/HTML (Django).sublime-settings"
+                                    "base_file": "${packages}/Djaneiro/Settings/Djaneiro.sublime-settings"
                                 },
-                                "caption": "Settings (HTML) – Default"
-                            },
-                            {
-                                "command": "open_file", "args":
-                                {
-                                    "file": "${packages}/User/HTML (Django).sublime-settings"
-                                },
-                                "caption": "Settings (HTML) – User"
-                            },
-                            { "caption": "-" },
-                            {
-                                "command": "open_file", "args":
-                                {
-                                    "file": "${packages}/Djaneiro/Settings/Python (Django).sublime-settings"
-                                },
-                                "caption": "Settings (Python) – Default"
-                            },
-                            {
-                                "command": "open_file", "args":
-                                {
-                                    "file": "${packages}/User/Python (Django).sublime-settings"
-                                },
-                                "caption": "Settings (Python) – User"
+                                "caption": "Settings"
                             }
                         ]
                     }

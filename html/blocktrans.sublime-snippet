@@ -6,6 +6,6 @@
 {% endblocktrans %}
 ]]> </content>
     <tabTrigger>blocktrans</tabTrigger>
-    <scope>text.html.django</scope>
+    <scope>text.html.django -entity</scope>
     <description>blocktrans</description>
 </snippet>
