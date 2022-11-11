@@ -128,7 +128,7 @@ class ToggleCommentDjangoCommand(sublime_plugin.TextCommand):
 
         comment_block_style = block_comments[0]
         if len(block_comments) >= 2:
-            comment_block_style = block_comments[2]
+            comment_block_style = block_comments[1]
 
         lines = view.lines(region)
 
