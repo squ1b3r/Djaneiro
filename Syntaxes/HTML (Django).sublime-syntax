@@ -111,45 +111,34 @@ variables:
 
 contexts:
   main:
-    - match: ""
-      push: "Packages/HTML/HTML.sublime-syntax"
-      with_prototype:
+    - include: scope:text.html.basic#main
 
-        - match: ({#)(.*)(#})
-          scope: comment.line.django
-          captures:
-            1: punctuation.definition.comment.django
-            3: punctuation.definition.comment.django
+    - match: ({#)(.*)(#})
+      scope: comment.line.django
+      captures:
+        1: punctuation.definition.comment.django
+        3: punctuation.definition.comment.django
 
-        - match: "{%\\s*comment\\s*(\"[^\"]*\"\\s*)?%}"
-          scope: punctuation.definition.comment.django
-          push:
-            - clear_scopes: true
-            - meta_scope: text.html.django comment.block.django
-            - include: commentblock
+    - match: "{%\\s*comment\\s*(\"[^\"]*\"\\s*)?%}"
+      scope: punctuation.definition.comment.django
+      push:
+        - clear_scopes: true
+        - meta_scope: text.html.django comment.block.django
+        - include: commentblock
 
-        - match: ({%)(\s*url)(\s*\S*\s?)(.*?)(%})
-          scope: entity.tag.url.django
-          captures:
-            1: meta.braces punctuation.section.block.begin
-            2: keyword.url-tag.django
-            3: text.url-name.django
-            4: text.url-parameters.django
-            5: meta.braces punctuation.section.block.end
+    - match: "{%\\s*(?=.*%})"
+      scope: meta.braces punctuation.section.block.begin
+      push:
+        - clear_scopes: true
+        - meta_scope: text.html.django entity.tag.tagbraces.django
+        - include: tagname
 
-        - match: "{%\\s*(?=.*%})"
-          scope: meta.braces punctuation.section.block.begin
-          push:
-            - clear_scopes: true
-            - meta_scope: text.html.django entity.tag.tagbraces.django
-            - include: tagname
-
-        - match: "{{(?=.*}})"
-          scope: meta.braces punctuation.section.block.begin
-          push:
-            - clear_scopes: true
-            - meta_scope: variable.language.django
-            - include: expr
+    - match: "{{(?=.*}})"
+      scope: meta.braces punctuation.section.block.begin
+      push:
+        - clear_scopes: true
+        - meta_scope: variable.language.django
+        - include: expr
 
   tagname:
     - match: "{{template_tags}}\\b"
