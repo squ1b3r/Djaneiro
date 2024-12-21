@@ -17,198 +17,165 @@ file_extensions:
 # match on "{% load " or "{% extends "
 first_line_match: (?i){%\s?(?>load|extends)\s
 
-variables:
-  template_tags: "(\
-        autoescape|endautoescape|\
-        block|endblock|\
-        csrf_token|\
-        cycle|\
-        debug|\
-        extends|\
-        filter|endfilter|\
-        firstof|\
-        for|empty|endfor|\
-        ifchanged|endifchanged|if|elif|else|endif|\
-        include|\
-        load|from|\
-        lorem|\
-        now|\
-        regroup|by|\
-        resetcycle|\
-        spaceless|endspaceless|\
-        templatetag|\
-        url|as|\
-        verbatim|endverbatim|\
-        widthratio|\
-        with|endwith|\
-        thumbnail|endthumbnail|\
-        static|get_static_prefix|get_media_prefix)"
-
-  template_filters: "(\
-          add|\
-          addslashes|\
-          apnumber|\
-          capfirst|\
-          center|\
-          cut|\
-          date|\
-          default|\
-          default_if_none|\
-          dictsort|\
-          dictsortreversed|\
-          divisibleby|\
-          escape|\
-          escapejs|\
-          filesizeformat|\
-          first|\
-          floatformat|\
-          force_escape|\
-          get_digit|\
-          intcomma|\
-          intword|\
-          iriencode|\
-          join|\
-          json_script|\
-          last|\
-          length|\
-          length_is|\
-          linebreaks|\
-          linebreaksbr|\
-          linenumbers|\
-          ljust|\
-          lower|\
-          make_list|\
-          naturalday|\
-          naturaltime|\
-          ordinal|\
-          phone2numeric|\
-          pluralize|\
-          pprint|\
-          random|\
-          rjust|\
-          safe|\
-          safeseq|\
-          slice|\
-          slugify|\
-          stringformat|\
-          striptags|\
-          time|\
-          timesince|\
-          timeuntil|\
-          title|\
-          truncatechars|\
-          truncatechars_html|\
-          truncatewords|\
-          truncatewords_html|\
-          unordered_list|\
-          upper|\
-          urlencode|\
-          urlize|\
-          urlizetrunc|\
-          wordcount|\
-          wordwrap|\
-          yesno)"
-
 contexts:
+  prototype:
+    - meta_prepend: true
+    - include: Text (Django).sublime-syntax
+
   main:
-    - include: scope:text.html.basic#main
+    - meta_prepend: true
+    - meta_scope: meta.template.django
 
-    - match: ({#)(.*)(#})
-      scope: comment.line.django
+  script-javascript-content:
+    - meta_include_prototype: false
+    - match: \s*((<!\[)(CDATA)(\[))
       captures:
-        1: punctuation.definition.comment.django
-        3: punctuation.definition.comment.django
+        1: meta.tag.sgml.cdata.html
+        2: punctuation.definition.tag.begin.html
+        3: keyword.declaration.cdata.html
+        4: punctuation.definition.tag.begin.html
+      pop: 1  # make sure to match only once
+      embed: scope:source.js.django
+      embed_scope: meta.tag.sgml.cdata.html source.js.embedded.html
+      escape: \]\]>
+      escape_captures:
+        0: meta.tag.sgml.cdata.html punctuation.definition.tag.end.html
+    - match: '{{script_content_begin}}'
+      captures:
+        1: comment.block.html punctuation.definition.comment.begin.html
+      pop: 1  # make sure to match only once
+      embed: scope:source.js.django
+      embed_scope: source.js.embedded.html
+      escape: '{{script_content_end}}'
+      escape_captures:
+        1: source.js.embedded.html
+        2: comment.block.html punctuation.definition.comment.end.html
+        3: source.js.embedded.html
+        4: comment.block.html punctuation.definition.comment.end.html
 
-    - match: "{%\\s*comment\\s*(\"[^\"]*\"\\s*)?%}"
-      scope: punctuation.definition.comment.django
-      push:
-        - clear_scopes: true
-        - meta_scope: text.html.django comment.block.django
-        - include: commentblock
+  script-json-content:
+    - meta_include_prototype: false
+    - match: \s*((<!\[)(CDATA)(\[))
+      captures:
+        1: meta.tag.sgml.cdata.html
+        2: punctuation.definition.tag.begin.html
+        3: keyword.declaration.cdata.html
+        4: punctuation.definition.tag.begin.html
+      pop: 1  # make sure to match only once
+      embed: scope:source.json.django
+      embed_scope: meta.tag.sgml.cdata.html source.json.embedded.html
+      escape: \]\]>
+      escape_captures:
+        0: meta.tag.sgml.cdata.html punctuation.definition.tag.end.html
+    - match: '{{script_content_begin}}'
+      captures:
+        1: comment.block.html punctuation.definition.comment.begin.html
+      pop: 1  # make sure to match only once
+      embed: scope:source.json.django
+      embed_scope: source.json.embedded.html
+      escape: '{{script_content_end}}'
+      escape_captures:
+        1: source.json.embedded.html
+        2: comment.block.html punctuation.definition.comment.end.html
+        3: source.json.embedded.html
+        4: comment.block.html punctuation.definition.comment.end.html
 
-    - match: "{%\\s*(?=.*%})"
-      scope: meta.braces punctuation.section.block.begin
-      push:
-        - clear_scopes: true
-        - meta_scope: text.html.django entity.tag.tagbraces.django
-        - include: tagname
+  style-css-content:
+    - meta_include_prototype: false
+    - match: \s*((<!\[)(CDATA)(\[))
+      captures:
+        1: meta.tag.sgml.cdata.html
+        2: punctuation.definition.tag.begin.html
+        3: keyword.declaration.cdata.html
+        4: punctuation.definition.tag.begin.html
+      pop: 1  # make sure to match only once
+      embed: scope:source.css.django
+      embed_scope: meta.tag.sgml.cdata.html source.css.embedded.html
+      escape: \]\]>
+      escape_captures:
+        0: meta.tag.sgml.cdata.html punctuation.definition.tag.end.html
+    - match: '{{style_content_begin}}'
+      captures:
+        1: comment.block.html punctuation.definition.comment.begin.html
+      pop: 1  # make sure to match only once
+      embed: scope:source.css.django
+      embed_scope: source.css.embedded.html
+      escape: '{{style_content_end}}'
+      escape_captures:
+        1: source.css.embedded.html
+        2: comment.block.html punctuation.definition.comment.end.html
+        3: source.css.embedded.html
+        4: comment.block.html punctuation.definition.comment.end.html
 
-    - match: "{{(?=.*}})"
-      scope: meta.braces punctuation.section.block.begin
-      push:
-        - clear_scopes: true
-        - meta_scope: variable.language.django
-        - include: expr
 
-  tagname:
-    - match: "{{template_tags}}\\b"
-      scope: keyword.function.django
-      push: tagexpr
-    # Match custom filters
-    - match: "\\w+\\b"
-      scope: variable.function.tag.django
-      push: tagexpr
+  # tag-attributes:
+  #   # Include django statement tags to prevent them being scoped meta.attribute-with-value
+  #   - meta_prepend: true
+  #   - include: Text (Django).sublime-syntax#commentblock
+  #   - include: Text (Django).sublime-syntax#statement-lines
+  #   - include: Text (Django).sublime-syntax#statement-blocks
 
-  tagexpr:
-    - match: "%}"
-      scope: meta.braces punctuation.section.block.end
-      pop: 2
-    - match: "(by|from|as)\\b"
-      scope: keyword.function.django
-    - match: "(==|>=|<=|<|>|!=)"
-      scope: keyword.operator.logical.django
-    - match: "'"
-      scope: string.quote.tag-string.django
-      push: singlestring
-    - match: '"'
-      scope: string.quote.tag-string.django
-      push: doublestring
-    - match: "\\d+\\.?\\d+"
-      scope: constant.numeric
-    - match: "\\w+"
-      scope: string.unquoted.tag-string.django
 
-  singlestring:
-    - meta_scope: string.quoted.single.django
-    - match: \'
-      scope: string.quote.tag-string.django
-      pop: true
-
-  doublestring:
-    - meta_scope: string.quoted.double.django
+  tag-event-attribute-value:
+    - meta_include_prototype: false
     - match: \"
-      scope: string.quote.tag-string.django
-      pop: true
+      scope: string.quoted.double.html punctuation.definition.string.begin.html
+      set: tag-event-attribute-value-double-quoted-body
+    - match: \'
+      scope: string.quoted.single.html punctuation.definition.string.begin.html
+      set: tag-event-attribute-value-single-quoted-body
+    - include: else-pop
 
-  expr:
-    - match: "'"
-      scope: punctuation.definition.string.begin.django
-      push: singlestring
-    - match: '"'
-      scope: punctuation.definition.string.begin.django
-      push: doublestring
-    - match: "\\|"
-      push: exprfilter
-    - match: "(\\w+)"
-      scope: entity.name.variable
-    - match: "}}"
-      scope: punctuation.section.block.end
-      pop: true
+  tag-event-attribute-value-double-quoted-body:
+    - meta_include_prototype: false
+    - meta_scope: meta.string.html
+    - meta_content_scope: source.js.embedded.html
+    - match: \"
+      scope: string.quoted.double.html punctuation.definition.string.end.html
+      pop: 1
+    - include: scope:source.js.embedded.string.quoted.double.django
 
-  exprfilter:
-    - meta_content_scope: variable.function.filter.django
-    # End the filter expression when we encounter anything that can't be part of the filter name,
-    # typically a space, a colon (e.g. {{var|filter:arg}}), or the closing }}.
-    # We use a look-ahead so that we don't swallow the curly bracket, as if we do then the `expr`
-    # context won't be able to match "}}".
-    - match: "{{template_filters}}\\b"
-      scope: entity.name.tag
-    - match: "(?=[^\\w])"
-      pop: true
+  tag-event-attribute-value-single-quoted-body:
+    - meta_include_prototype: false
+    - meta_scope: meta.string.html
+    - meta_content_scope: source.js.embedded.html
+    - match: \'
+      scope: string.quoted.single.html punctuation.definition.string.end.html
+      pop: 1
+    - include: scope:source.js.embedded.string.quoted.single.django
 
+  tag-style-attribute-value:
+    - meta_include_prototype: false
+    - match: \"
+      scope: string.quoted.double.html punctuation.definition.string.begin.html
+      set: tag-style-attribute-value-double-quoted-body
+    - match: \'
+      scope: string.quoted.single.html punctuation.definition.string.begin.html
+      set: tag-style-attribute-value-single-quoted-body
+    - include: else-pop
 
+  tag-style-attribute-value-double-quoted-body:
+    - meta_include_prototype: false
+    - meta_scope: meta.string.html
+    - meta_content_scope: source.css.embedded.html
+    - match: \"
+      scope: string.quoted.double.html punctuation.definition.string.end.html
+      pop: 1
+    - include: scope:source.css.embedded.string.quoted.double.django
 
-  commentblock:
-    - match: "{%\\s*endcomment\\s*%}"
-      scope: punctuation.definition.comment.django
-      pop: true
+  tag-style-attribute-value-single-quoted-body:
+    - meta_include_prototype: false
+    - meta_scope: meta.string.html
+    - meta_content_scope: source.css.embedded.html
+    - match: \'
+      scope: string.quoted.single.html punctuation.definition.string.end.html
+      pop: 1
+    - include: scope:source.css.embedded.string.quoted.single.django
+
+  tag-attribute-value-content:
+    - meta_prepend: true
+    - include: Text (Django).sublime-syntax#main
+
+  strings-common-content:
+    - meta_prepend: true
+    - include: Text (Django).sublime-syntax#main
