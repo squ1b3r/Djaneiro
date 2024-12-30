@@ -24,4 +24,4 @@ contexts:
 
   string-content:
     - meta_prepend: true
-    - include: Text (Django).sublime-syntax#interpolations
+    - include: Text (Django).sublime-syntax#main

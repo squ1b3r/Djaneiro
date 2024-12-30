@@ -113,18 +113,7 @@ contexts:
 
   main:
 
-    - match: "({#)(.*)(#})"
-      scope: comment.line.django
-      captures:
-        1: punctuation.definition.comment.django
-        3: punctuation.definition.comment.django
-
-    - match: "{%\\s*comment\\s*(\"[^\"]*\"\\s*)?%}"
-      scope: punctuation.definition.comment.django
-      push:
-        - clear_scopes: true
-        - meta_scope: text.html.django comment.block.django
-        - include: commentblock
+    - include: comments
 
     - match: ({%)(\s*url)(\s*\S*\s?)(.*?)(%})
       scope: entity.tag.url.django
@@ -216,11 +205,30 @@ contexts:
       pop: true
 
 
+  comments:
+    - include: commenttag
+    - include: line-comments
 
-  commentblock:
+  commenttag:
+    - match: "{%\\s*comment\\s*(\"[^\"]*\"\\s*)?%}"
+      scope: punctuation.definition.comment.django
+      push:
+        - clear_scopes: true
+        - meta_scope: text.html.django comment.block.django
+        - include: commenttag-end
+
+  commenttag-end:
     - match: "{%\\s*endcomment\\s*%}"
       scope: punctuation.definition.comment.django
       pop: true
 
+  line-comments:
+    - match: \{\#
+      scope: punctuation.definition.comment.begin.django
+      push: line-comment-body
 
-
+  line-comment-body:
+    - meta_scope: meta.embedded.comment.django comment.block.django
+    - match: \#\}
+      scope: punctuation.definition.comment.end.django
+      pop: 1

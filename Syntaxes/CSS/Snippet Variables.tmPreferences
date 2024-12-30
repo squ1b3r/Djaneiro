@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plist version="1.0">
+<dict>
+	<key>scope</key>
+	<string>
+		source.css.django,
+		text.html.django source.css.embedded
+	</string>
+	<key>settings</key>
+	<dict>
+		<key>shellVariables</key>
+		<array>
+			<dict>
+				<!-- Syntax specific block snippet content indentation -->
+				<key>name</key>
+				<string>TM_TEMPLATE_INDENT</string>
+				<key>value</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+</dict>
+</plist>

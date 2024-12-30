@@ -1,0 +1,65 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/syntax.html
+name: CSS (Django)
+scope: source.css.django
+version: 2
+
+extends: Packages/CSS/CSS.sublime-syntax
+
+
+variables:
+
+  # CSS overrides
+
+  ident_start: (?:{{nmstart}}|{{)
+
+  # required until ST4173
+  selector_begin: (?={{selector_start}}|{{)
+  # required until ST4173
+  nested_selector_begin: (?={{nested_selector_start}}|{{)
+
+  tag_name_begin: (?=[[:alpha:]]|{{)
+
+  # CSS (Django) variables
+  #...
+
+contexts:
+
+  prototype:
+    - meta_prepend: true
+    - include: Text (Django).sublime-syntax
+
+  main:
+    # The top-level context must contain django statements only.
+    # Django expressions are excluded as they are consumed by child contexts
+    # such as selectors, property names or property values.
+    - meta_prepend: true
+    - meta_include_prototype: false
+    - meta_scope: meta.template.django
+    - include: Text (Django).sublime-syntax#comments
+
+  block-end:
+    # This context is included in each style-rule block context,
+    # which must contain django statements only.
+    # Django expressions are excluded as they are consumed by child contexts
+    # such as selectors, property names or property values.
+    - meta_append: true
+    - include: Text (Django).sublime-syntax#main
+
+  at-supports-group-body:
+    - meta_prepend: true
+    - meta_include_prototype: false
+    - include: Text (Django).sublime-syntax
+
+  property-lists:
+    # A `{{` indicates the beginning of a selector or property name context
+    # beginning with a Django expression rather than a style rule block.
+    - match: \{(?![{%#])
+      scope: punctuation.section.block.begin.css
+      push: property-list-body
+
+
+  string-content:
+    - meta_prepend: true
+    - include: Text (Django).sublime-syntax#main
