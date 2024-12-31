@@ -1,0 +1,27 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/syntax.html
+name: JavaScript (Django)
+scope: source.js.django
+version: 2
+
+extends: Packages/JavaScript/JavaScript.sublime-syntax
+
+contexts:
+
+  prototype:
+    - meta_prepend: true
+    - include: Text (Django).sublime-syntax
+
+  main:
+    - meta_prepend: true
+    - meta_scope: meta.template.django
+
+  expressions:
+    # required until ST4178
+    - match: (?=\S)
+      push: [ expression-end, expression-begin ]
+
+  string-content:
+    - meta_prepend: true
+    - include: Text (Django).sublime-syntax#main
